@@ -1,13 +1,9 @@
 // Variables
 const toggle = document.querySelector('.toggle');
 const menu = document.querySelector('.menu');
-const cards = document.querySelectorAll('.card');
-const dots = document.querySelectorAll('.dot');
 const errMsg = document.querySelector('.err-msg');
 const form = document.querySelector('form');
 const input = document.querySelector('input');
-const prev = document.querySelector('.prev');
-const next = document.querySelector('.next');
 
 // Toggle
 toggle.addEventListener('click', () => {
@@ -15,74 +11,29 @@ toggle.addEventListener('click', () => {
     menu.classList.toggle('menu-visible');
 });
 
-// Select Item
-function selectItem() {
-    // Remove Show
-    removeCard();
-    // Remove Dot Background
-    removeBackground();
-    // Add Dot Background
-    this.classList.add('active');
-    // Grab Show From DOM
-    const cardContent = document.querySelector(`.${this.id}-current`);
-    cardContent.classList.add('current');
-};
-
-
-// Remove Dot Background
-function removeBackground() {
-    dots.forEach(dot => dot.classList.remove('active'))
-};
-
-// Remove Show
-function removeCard() {
-    cards.forEach(card => card.classList.remove('current'))
-};
-
-// Carousel Init Mobile
-dots.forEach(dot => dot.addEventListener('click', selectItem));
-
-// Next Slide
-const nextSlide = () => {
-    // Get current class
-    const current = document.querySelector('.current');
-    // Remove current class
-    current.classList.remove('current');
-    // Check for next slide
-    if (current.nextElementSibling) {
-        // Add current to next sibling
-        current.nextElementSibling.classList.add('current');
-    } else {
-        // Add current to start
-        cards[0].classList.add('current');
-    }
-    setTimeout(() => current.classList.remove('current'));
-};
-
-// Previous Slide
-const prevSlide = () => {
-    // Get current class
-    const current = document.querySelector('.current');
-    // Remove current class
-    current.classList.remove('current');
-    // Check for previous slide
-    if (current.previousElementSibling) {
-        // Add current to previous sibling
-        current.previousElementSibling.classList.add('current');
-    } else {
-        // Add current to start
-        cards[cards.length - 1].classList.add('current');
-    }
-    setTimeout(() => current.classList.remove('current'));
-};
-
-// Carousel Init Desktop
-next.addEventListener('click', e => {
-    nextSlide();
-});
-
-prev.addEventListener('click', e => {
-    prevSlide();
+// Carousel Init
+$(document).ready(function() {
+    const cards = $('.cards');
+    cards.owlCarousel({
+        items: 3,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        smartSpeed: 1000,
+        loop: true,
+        center: true,
+        margin: 10,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            576: {
+                items: 2,
+            },
+            992: {
+                items: 3,
+            },
+        },
+    });
 });
 
 // Form Validation
@@ -98,6 +49,5 @@ form.addEventListener('submit', (e) => {
         document.querySelector('input').value = '';
     } else {
         errMsg.style.display = 'block';
-
     }
 });

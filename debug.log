@@ -1,0 +1,2 @@
+[0101/011218.671:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: The operation completed successfully. (0x0)
+[1103/011527.963:ERROR:file_io.cc(134)] WriteFile: The pipe is being closed. (0xE8)
