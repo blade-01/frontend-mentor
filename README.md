@@ -58,4 +58,6 @@
 
 - Manage Landing Page [view](https://manages.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/manage)
 
+- Room Homepage [view](https://room-home.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/room)
+
 ## Adios! 👋
