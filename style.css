@@ -252,6 +252,19 @@ main {
     left: 0;
 }
 
+.tab-content {
+    animation: opacity 1s;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .tab-section-content h1 {
     font-size: 30px;
     padding: 1rem 0;
@@ -694,16 +707,10 @@ input {
         display: flex;
         justify-content: center;
         align-self: center;
-        /* margin: 2rem 50rem; */
-        /* top: 0; */
-        /* display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 1rem;
-        align-items: center;
-        justify-content: center;
-        text-align: center; */
+        margin: auto;
     }
     .tabs li {
+        display: inline-flex;
         padding: 1rem 0;
         border-top: none;
     }
