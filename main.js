@@ -1,5 +1,5 @@
 // Variables
-const toggle = document.querySelector('.toggle');
+const toggle = document.querySelectorAll('.toggle');
 const closed = document.querySelector('.close');
 const menu = document.querySelector('.menu');
 const slides = document.querySelectorAll('.slide');
@@ -9,9 +9,11 @@ const next = document.querySelector('.next');
 let intervalTime = 5000;
 
 // Toggle
-toggle.addEventListener('click', () => {
-    menu.style.height = "100vh";
-});
+toggle.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        menu.style.height = "100vh";
+    });
+})
 
 menu.addEventListener('click', (e) => {
     if (e.classList = 'close') {

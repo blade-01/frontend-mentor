@@ -176,15 +176,15 @@ button svg path:hover {
 /* Showcase */
 
 section {
-    height: 350px;
+    height: auto;
     width: 100%;
-    padding: 3rem 0 2rem;
+    padding: 3rem 0;
     animation: opacity 0.5s;
     position: relative;
 }
 
 .showcase-content h1 {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 1;
     margin-bottom: 1rem;
 }
@@ -285,7 +285,7 @@ section {
 /* Attribution */
 
 .attribution {
-    font-size: 11px;
+    font-size: 10px;
     text-align: center;
     padding: 1rem;
 }
