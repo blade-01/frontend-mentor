@@ -1,0 +1,157 @@
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background: var(--light-gray);
+}
+
+
+/* Global */
+
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+.wrapper {
+    margin: 10vh auto 10vh auto;
+    max-width: 90%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+}
+
+.cyan {
+    color: var(--cyan);
+    font-size: 20px;
+}
+
+.yellow {
+    color: var(--bright-yellow);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header */
+
+.header {
+    background: #ffffff;
+    padding: 1rem;
+}
+
+.header-content {
+    width: 95%;
+    margin: auto;
+}
+
+.inner-head {
+    color: var(--grayish-blue);
+    line-height: 1.5;
+}
+
+
+/* Grid */
+
+.griddy {
+    color: #ffffff;
+}
+
+.grid-1 {
+    background: var(--cyan);
+    padding: 1rem;
+}
+
+.btn {
+    background: var(--bright-yellow);
+    color: #ffffff;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    -webkit-box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+    margin: 2rem auto 1rem auto;
+}
+
+.sub-why {
+    padding-bottom: .5rem;
+}
+
+.grow {
+    font-size: 20px;
+}
+
+.doll {
+    color: var(--light-gray);
+}
+
+.dollar {
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.grid-2 {
+    background: hsl(179, 53%, 53%);
+    padding: 1rem;
+}
+
+ul {
+    color: var(--light-gray);
+}
+
+@media(min-width:768px) {
+    .wrapper {
+        max-width: 900px;
+    }
+    .container {
+        width: 70%;
+    }
+    .header-content {
+        width: 65%;
+        margin-left: 4rem;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .btn {
+        margin: 2.5rem 0 0 0;
+    }
+    .why {
+        padding-bottom: 0;
+    }
+    .doll {
+        margin-top: 1.8rem;
+    }
+    .full {
+        font-size: large;
+    }
+    ul {
+        font-size: small;
+    }
+    .btn {
+        font-size: larger;
+    }
+}
+
+@media(min-width:1440px) {
+    .wrapper {
+        margin: 20vh auto;
+        max-width: 900px;
+    }
+}

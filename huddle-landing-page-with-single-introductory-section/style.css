@@ -1,0 +1,172 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background: var(--violet);
+}
+
+:root {
+    --violet: hsl(257, 40%, 49%);
+}
+
+
+/* Global */
+
+.container {
+    width: 80%;
+    overflow: hidden;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* Showcase */
+
+.showcase {
+    background: url("./images/bg-mobile.svg") no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 100vh;
+    color: #ffffff;
+}
+
+.logo {
+    margin-bottom: 4rem;
+    width: 130px;
+    margin-top: 1.5rem;
+}
+
+.illustrate {
+    margin-bottom: 4rem;
+}
+
+.illustrate-content {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.illustrate-head {
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 0;
+}
+
+.btn {
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding: 0.8rem 5rem;
+    background: #ffffff;
+    color: var(--violet);
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    font-size: 14px;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* Icons */
+
+.icons {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 7px;
+}
+
+.fab {
+    color: #ffffff;
+    background: var(--violet);
+    margin-right: 0.5rem;
+    border: solid 1px #ffffff;
+    border-radius: 50%;
+    width: 25px;
+    height: 20px;
+    line-height: 30px;
+    font-size: 15px;
+    padding-top: 0.4rem;
+    text-align: center;
+    display: inline-block;
+}
+
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+    . .icons {
+        text-align: center;
+        margin: 0 0 1.5rem 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 82%;
+    }
+    .showcase {
+        background: url("./images/bg-desktop.svg") no-repeat;
+        background-size: 90% 100%;
+        width: 100%;
+        height: 100vh;
+        color: #ffffff;
+    }
+    .logo {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        width: 160px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+    .illustrate {
+        width: 600px;
+    }
+    .illustrate-content {
+        text-align: left;
+        line-height: 1.8;
+        width: 100%;
+    }
+    .illustrate-head {
+        width: 90%;
+        font-size: 35px;
+    }
+    .btn {
+        padding: 0.9rem 3.8rem;
+    }
+    .icons {
+        text-align: right;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .illustrate {
+        width: 690px;
+    }
+    .illustrate-head {
+        width: 85%;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 3rem;
+    }
+    .logo {
+        margin-top: 5.5rem;
+        margin-bottom: 5rem;
+        width: 160px;
+    }
+    .icons {
+        text-align: right;
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+    }
+}
