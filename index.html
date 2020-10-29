@@ -7,19 +7,21 @@
     <!-- displays site properly based on user's device -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
-    <title>Frontend Mentor | Fylo data storage component</title>
+    <title>Frontend Mentor | Fylo landing page with two column layout</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
         .attribution {
             font-size: 11px;
             text-align: center;
-            position: absolute;
-            bottom: 0;
-            left: calc(50% - 308.56px/2);
+            background: var(--very-dark-blue);
+            padding: .5rem;
+            margin: 0;
         }
         
         .attribution a {
@@ -29,40 +31,134 @@
 </head>
 
 <body>
-    <div class="showcase">
+
+    <!-- Header -->
+    <header class="header">
         <div class="container">
-            <div class="float">
-                <div class="float-left">
-                    <div class="float-left-content">
-                        <img src="./images/logo.svg" alt="">
-                        <div class="files">
-                            <img class="file" src="./images/icon-document.svg" alt="">
-                            <img class="file" src="./images/icon-folder.svg" alt="">
-                            <img class="file" src="./images/icon-upload.svg" alt="">
-                        </div>
+            <div class="logo">
+                <img src="./images/logo.svg" alt="">
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li>Features</li>
+                    <li>Team</li>
+                    <li>Sign In</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Showcase -->
+    <section class="showcase">
+        <div class="container">
+            <div class="grid flex">
+                <div class="showcase-content">
+                    <p class="text-head">All your files in one secure location, accessible anywhere.</p>
+                    <p>Fylo stores your most important files in one secure location. Access them wherever you need, share and collaborate with friends, family, and co-workers.</p>
+                    <div class="get-started">
+                        <input type="text" placeholder="Enter your email...">
+                        <button class="btn">Get Started</button>
                     </div>
                 </div>
-                <div class="float-right">
-                    <div class="float-right-content">
-                        <p class="storage">You’ve used <strong>815 GB</strong> of your storage</p>
-                        <div class="progress">
-                            <div class="progress-bar">
-                                <div class="progress-bar-mini"></div>
+                <div class="illustrate-1">
+                    <img src="./images/illustration-1.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="showcase-1">
+        <div class="container">
+            <div class="grid flex">
+                <div class="showcase-1-content">
+                    <p class="text-head-1">Stay productive, wherever you are</p>
+                    <div class="inner-text">
+                        <p>Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.</p>
+                        <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required!</p>
+                    </div>
+                    <div class="fylo-see">
+                        <p>See how Fylo works</p>
+                        <img src="./images/icon-arrow.svg" alt="">
+                    </div>
+                    <hr class="hr">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="./images/icon-quotes.svg" alt="">
+                        </div>
+                        <div class="card-text">
+                            <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</p>
+                        </div>
+                        <div class="card-comment">
+                            <img src="./images/avatar-testimonial.jpg" alt="">
+                            <div class="details">
+                                <p class="name">Kyle Burton</p>
+                                <p class="title">Founder & CEO, Huddle</p>
                             </div>
                         </div>
-                        <p class="left">0 GB</p>
-                        <p class="right">1000 GB</p>
                     </div>
                 </div>
-                <div class="gb-left">
-                    <p><strong class="gb">185</strong> GB LEFT</p>
+                <div class="illustrate-2">
+                    <img src="./images/illustration-2.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Access -->
+    <section class="access">
+        <div class="container">
+            <div class="grid">
+                <div class="access-content">
+                    <p class="text-head-2">Get early access today</p>
+                    <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+                </div>
+                <div class="get-started-1">
+                    <input type="text" placeholder="email@example.com">
+                    <button class="btn-1">Get Started For Free</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry -->
+    <div class="enquiry">
+        <div class="container">
+            <div class="enquiry-content">
+                <div class="logo-1">
+                    <img src="./images/logo-1.svg" alt="">
+                </div>
+                <div class="contact">
+                    <ul>
+                        <li><img src="./images/icon-phone.svg" alt=""> Phone: +1-543-123-4567</li>
+                        <li><img src="./images/icon-email.svg" alt=""> example@fylo.com</li>
+                    </ul>
+                    <ul>
+                        <li>About Us</li>
+                        <li>Jobs</li>
+                        <li>Press</li>
+                        <li>Blog</li>
+                    </ul>
+                    <ul>
+                        <li>Contact Us</li>
+                        <li>Terms</li>
+                        <li>Privacy</li>
+                    </ul>
+                    <ul class="icons">
+                        <li><a class="fab fa-facebook-f fa-2x" href=""><i></i></a></li>
+                        <li><a href=""><i class="fab fa-twitter fa-2x"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram fa-2x"></i></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.github.com/blade-01">Animashaun Taofiq T</a>.
-    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.github.com/blade-01">Animashaun Taofiq T</a>.
+        </p>
+    </footer>
 </body>
 
 </html>
