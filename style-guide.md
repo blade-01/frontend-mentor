@@ -11,22 +11,35 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Desaturated Dark Cyan: hsl(180, 29%, 50%)
+- Cyan: hsl(180, 66%, 49%)
+- Dark Violet: hsl(257, 27%, 26%)
+
+### Secondary
+
+- Red: hsl(0, 87%, 67%)
 
 ### Neutral
 
-- Light Grayish Cyan (Background): hsl(180, 52%, 96%)
-- Light Grayish Cyan (Filter Tablets): hsl(180, 31%, 95%)
-- Dark Grayish Cyan: hsl(180, 8%, 52%)
-- Very Dark Grayish Cyan: hsl(180, 14%, 20%)
+- Gray: hsl(0, 0%, 75%)
+- Grayish Violet: hsl(257, 7%, 63%)
+- Very Dark Blue: hsl(255, 11%, 22%)
+- Very Dark Violet: hsl(260, 8%, 14%)
 
 ## Typography
 
 ### Body Copy
 
-- Font size: 15px
+- Font size: 18px
 
-### Headings
+### Fonts
 
-- Family: [Spartan](https://fonts.google.com/specimen/Spartan)
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
 - Weights: 500, 700
+
+## Icons
+
+For the social icons, you can either use the SVGs provided or a font icon library. Some suggestions for font icon libraries can be found below:
+
+- [Font Awesome](https://fontawesome.com)
+- [IcoMoon](https://icomoon.io)
+- [Ionicons](https://ionicons.com)

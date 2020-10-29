@@ -1,84 +1,65 @@
-const input = document.querySelector('#input');
-const clear = document.querySelector('.btn');
-const filterList = document.querySelector('.filter-list');
+// Variables
+const toggle = document.querySelector('.toggle');
+const menu = document.querySelector('.menu');
+const form = document.querySelector('form');
+const sectionOne = document.querySelector(".shorten");
+const shorten = document.querySelector(".shorten-content");
 
-// // Search data.json and filter it
-// const inputData = async inputText => {
-//     const res = await fetch('./data.json');
-//     const data = await res.json();
+// Event
 
-//     // Get matches to current text input
-//     let matches = data.filter(data => {
-//         const regex = new RegExp(`^${inputText}`, 'gi');
-//         return data.position.match(regex);
-//     });
-
-//     if (inputText.length === 0) {
-//         matches = [];
-//         filterList = '';
-//     }
-
-//     outputHtml(matches);
-// };
-
-// // Show results in HTML
-// const outputHtml = matches => {
-//     if (matches.length > 0) {
-//         const result = matches.map(match => `<div class="filter-- filter-1">
-//         <div>
-//             <img src="${match.logo}" alt="">
-//             <li class="title">
-//                 <p>${match.company} <span class="new">${match.new}</span> <span class="featured">${match.featured}</span></p>
-//             </li>
-//             <li class="post">
-//                 <h4>${match.position}</h4>
-//             </li>
-//             <li class="location">
-//                 <p>
-//                 ${match.postedAt}
-//                     <span><i class="fa fa-circle"></i></span> ${match.contract}
-//                     <span><i class="fa fa-circle"></i></span> ${match.location}
-//                 </p>
-//             </li>
-//         </div>
-//         <hr>
-//         <div class="role">
-//         <p>${match.role}</p>
-//         <p>${match.level}</p>
-//         <p>${match.languages}</p>
-//         <p>${match.tools}</p>
-//         </div>
-//         </div>`).join('');
-
-//         filterList.innerHTML = result;
-//     }
-// };
-
-// input.addEventListener('input', () => inputData(input.value));
-
-input.addEventListener('input', () => {
-    // input.style.background = 'url(./images/icon-remove.svg) right 20px center no-repeat';
-    // input.style.background = '#ddd';
-    // Get value of input
-    const inputValue = document.querySelector('#input').value;
-    input.style.padding = '1rem';
-    input.style.color = 'var(--desaturated-dark-cyan)';
-    input.style.fontWeight = 'bolder';
-    // Get Filter List
-    const filter = document.querySelector('.filter-list');
-    // Get Filter from List
-    const filterList = filter.querySelectorAll('.filter--');
-    // Loop through collection of list
-    filterList.forEach((filter) => {
-        if (filter.innerHTML.indexOf(inputValue) > -1) {
-            filter.style.display = '';
-        } else {
-            filter.style.display = 'none';
-        }
-    })
+// Toggle
+toggle.addEventListener('click', () => {
+    toggle.classList.toggle('display')
+    menu.classList.toggle('display');
 });
 
-clear.addEventListener('click', (e) => {
+// Form
+const shortenedLinks = document.querySelector(".shortened-links");
+const errorMsg = document.querySelector('.error-msg');
+form.addEventListener('submit', (e) => {
     e.preventDefault();
-    document.querySelector('#input').value = '';
-})
+    const input = document.querySelector('input');
+    if (input.value != "") {
+        const newShortenedLink = document.createElement("div");
+        newShortenedLink.setAttribute('class', 'shorten-link')
+
+        const oldLink = document.createElement("div");
+        oldLink.setAttribute('class', 'old-link');
+        oldLink.innerText = input.value;
+
+        const newLink = document.createElement("div");
+        newLink.setAttribute('class', 'new-link');
+        const newLinkDiv = document.createElement("div");
+        newLinkDiv.innerText = "https://rel.ink/" + getrandom();
+
+        const newLinkBtn = document.createElement("button");
+        newLinkBtn.innerText = "Copy";
+        newLinkBtn.addEventListener('click', () => {
+            newLinkBtn.setAttribute('class', 'clicked');
+            newLinkBtn.innerText = "Copied!";
+        })
+
+        newLink.appendChild(newLinkDiv);
+        newLink.appendChild(newLinkBtn);
+
+        newShortenedLink.appendChild(oldLink);
+        newShortenedLink.appendChild(newLink);
+
+        shortenedLinks.insertBefore(newShortenedLink, shortenedLinks.firstElementChild);
+        errorMsg.style.display = "none";
+        input.value = "";
+        input.style.border = "none";
+    } else {
+        input.style.border = "2px solid #ff5656";
+        errorMsg.style.display = "block";
+    }
+});
+
+function getrandom() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (var i = 0; i < 5; i++)
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    return text;
+}
