@@ -11,30 +11,32 @@ The designs were created to the following widths:
 
 ### Primary
 
-Bright Red: hsl(12, 88%, 59%)
-Dark Blue: hsl(228, 39%, 23%)
+- Blue: hsl(223, 87%, 63%)
+
+### Secondary
+
+- Pale Blue: hsl(223, 100%, 88%)
+- Light Red: hsl(354, 100%, 66%)
 
 ### Neutral
 
-Dark Grayish Blue: hsl(227, 12%, 61%)
-Very Dark Blue: hsl(233, 12%, 13%)
-Very Pale Red: hsl(13, 100%, 96%)
-Vary Light Gray: hsl(0, 0%, 98%)
+- Gray: hsl(0, 0%, 59%)
+- Very Dark Blue: hsl(209, 33%, 12%)
 
 ## Typography
 
 ### Body Copy
 
-- Font size: 16px
+- Font size: 20px
 
-### Font
+### Fonts
 
-- Family: [Be Vietnam](https://fonts.google.com/specimen/Be+Vietnam)
-- Weights: 400, 500, 700
+- Family: [Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin)
+- Weights: 300, 600, 700
 
 ## Icons
 
-For the social icons, you can use the icons provided or a font icon library. Some suggestions for font icon libraries can be found below:
+For the social icons, you can use a font icon library. Some suggestions can be found below:
 
 - [Font Awesome](https://fontawesome.com)
 - [IcoMoon](https://icomoon.io)

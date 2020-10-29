@@ -1,6 +1,6 @@
-# Frontend Mentor - Manage landing page
+# Frontend Mentor - Ping coming soon page
 
-![Design preview for the Manage landing page coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Ping coming soon page coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
 
@@ -12,18 +12,18 @@ Thanks for checking out this front-end coding challenge.
 
 ## The challenge
 
-Your challenge is to build out this landing page and get it looking as close to the design as possible.
+Your challenge is to build out this Coming Soon page and get it looking as close to the design as possible.
 
 You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-Your users should be able to:
+Your users should be able to: 
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
-- See all testimonials in a horizontal slider
-- Receive an error message when the newsletter sign up `form` is submitted if:
-  - The `input` field is empty
-  - The email address is not formatted correctly
+- Submit their email address using an `input` field
+- Receive an error message when the `form` is submitted if:
+	- The `input` field is empty. The message for this error should say *"Whoops! It looks like you forgot to add your email"*
+	- The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say *"Please provide a valid email address"*
 
 Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
@@ -33,7 +33,7 @@ Your task is to build out the project to the designs inside the `/design` folder
 
 The designs are in JPG static format. This will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. This should help train your eye to perceive differences in spacings and sizes.
 
-If you would like the Sketch file in order to inspect the design in more detail you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+If you would like the Sketch file in order to see sizes etc, it is available to download from the challenge page.
 
 You will find all the required assets in the `/images` folder. The assets are already optimized.
 
@@ -49,6 +49,7 @@ Feel free to use any workflow that you feel comfortable with. Below is a suggest
 4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
 5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
 6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+7. If you'd like to try making your project fully responsive, we'd recommend checking out [Sizzy](https://bit.ly/fm-sizzy). It's a great browser that makes it easy to view your site across multiple devices.
 
 ## Deploying your project
 
@@ -78,6 +79,6 @@ This challenge is completely free. Please share it with anyone who will find it 
 
 A massive thank you to our community sponsors!
 
-- [Hack for NF](https://bit.ly/fem-bemyapp) is a perfect opportunity to write code, contribute to an amazing cause, meet others, and have fun all at the same time! The hackathon starts October 2nd and runs through to November 13th. Datasets, mentor support, and input from patients are all provided. There's also $40K USD in prizes and grants up for grabs!
+- [Sizzy](https://bit.ly/fm-sizzy) is an extremely useful browser designed specifically to improve a developer's workflow when building websites. You can fire up multiple device emulators and run them all in sync while building out your web pages. Perfect for helping build fully responsive websites!
 - [Diversify Tech](https://bit.ly/fem-diversify-tech) is an amazing resource for underrepresented people in tech. The site features job listings for anyone seeking new opportunities. The resource section is also full of useful links to dive into!
-- [Zero to Mastery](https://bit.ly/fem-ztm) is an incredible learning resource for all things web development. Led by Andrei Neagoie, the courses are really high-quality content and cover a wide range of in-demand skills.
+- [Dracula PRO](https://bit.ly/fem-dracula) is a beautiful dark theme to help keep you focused and productive while you code. The theme isn't just for your editor either. You can also apply it to your most-used apps like your terminal and even Slack!
