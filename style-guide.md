@@ -11,27 +11,21 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Red: hsl(0, 100%, 68%)
+- Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
 
 ### Neutral
 
-- Very Dark Blue: hsl(230, 29%, 20%)
-- Dark Grayish Blue: hsl(230, 11%, 40%)
-- Grayish Blue: hsl(231, 7%, 65%)
-- Light Grayish Blue: hsl(207, 33%, 95%)
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: hsl(218, 22%, 67%)
 
 ## Typography
 
 ### Body Copy
 
-- Font size: 18px
+- Font size: 16px
 
-### Headings, Call-to-actions, Navigation
+### Font
 
-- Family: [Barlow Condensed](https://fonts.google.com/specimen/Barlow+Condensed)
+- Family: [Karla](https://fonts.google.com/specimen/Karla)
 - Weights: 400, 700
-
-### Body
-
-- Family: [Barlow](https://fonts.google.com/specimen/Barlow)
-- Weights: 400
