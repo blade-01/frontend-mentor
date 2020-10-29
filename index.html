@@ -7,71 +7,171 @@
     <!-- displays site properly based on user's device -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <title>Frontend Mentor | Single Price Grid Component</title>
+    <title>Frontend Mentor | [Social Media Dashboard with Theme Switcher]</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-        .attribution {
-            font-size: 11px;
-            text-align: center;
-        }
-        
-        .attribution a {
-            color: hsl(228, 45%, 44%);
-        }
-    </style>
+
 </head>
 
 <body>
-    <div class="wrapper">
-        <!-- Header -->
-        <div class="header">
+
+    <!-- Header -->
+    <header>
+        <div class="container">
             <div class="header-content">
-                <p class="cyan sub-why grow"><strong>Join our community</strong></p>
-                <p class="yellow sub-why"><strong>30-day, hassle-free money back guarantee</strong></p>
-                <div class="inner-head">
-                    <p>Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills.</p>
+                <div class="header-1">
+                    <h1>Social Media Dashboard</h1>
+                    <p>Total Followers: 23,004</p>
+                </div>
+                <hr>
+                <div class="toggle-box">
+                    <p>Dark Mode</p><input type="checkbox" id="toggle" class="checkbox" />
+                    <label for="toggle" class="switch"></label>
+                    <!-- <p>Monthly</p> -->
                 </div>
             </div>
         </div>
+    </header>
 
-        <!-- Grid -->
-        <div class="griddy">
-            <div class="grid">
-                <div class="grid-1">
-                    <div class="container">
-                        <p class="sub-why grow"><strong>Monthly Subscription</strong></p>
-                        <p class="doll"><strong class="dollar">&dollar;29</strong> per month</p>
-                        <p class="full">Full access for less than &dollar;1 a day</p>
-                        <button class="btn">Sign Up</button>
+    <!-- Cards -->
+    <div class="cards">
+        <div class="container">
+            <div class="card">
+                <div class="card--1 card-1">
+                    <li><img src="./images/icon-facebook.svg" alt=""> @nathanf</li>
+                    <p data-target="1987" class="number">0</p>
+                    <p class="followers">Followers</p>
+                    <li class="green"><img src="./images/icon-up.svg" alt=""> 12 Today</li>
+                </div>
+                <div class="card--1 card-2">
+                    <li><img src="./images/icon-twitter.svg" alt=""> @nathanf</li>
+                    <p data-target="1044" class="number">0</p>
+                    <p class="followers">Followers</p>
+                    <li class="green"><img src="./images/icon-up.svg" alt=""> 99 Today</li>
+                </div>
+                <div class="card--1 card-3">
+                    <li><img src="./images/icon-instagram.svg" alt=""> @realnathanf</li>
+                    <p data-target="1190" class="number">0</p>
+                    <p class="followers">Followers</p>
+                    <li class="green"><img src="./images/icon-up.svg" alt=""> 1099 Today</li>
+                </div>
+                <div class="card--1 card-4">
+                    <li><img src="./images/icon-youtube.svg" alt=""> Nathan F.</li>
+                    <p data-target="8239" class="number">0</p>
+                    <p class="followers">Subscribers</p>
+                    <li class="red"><img src="./images/icon-down.svg" alt=""> 144 Today</li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cards-1 -->
+    <div class="cards-1">
+        <div class="container">
+            <h1>Overview - Today</h1>
+            <div class="card-">
+                <div class="card--2">
+                    <li>
+                        <p>Page Views</p><img src="./images/icon-facebook.svg" alt="">
+                    </li>
+                    <div class="left">
+                        <p class="number-1">87</p>
+                    </div>
+                    <div class="right">
+                        <img src="./images/icon-up.svg" alt=""> 3%
                     </div>
                 </div>
-                <div class="grid-2">
-                    <div class="container">
-                        <p class="sub-why grow why"><strong>Why Us</strong></p>
-                        <ul>
-                            <p>Tutorials by industry experts</p>
-                            <p>Peer &amp; expert code review</p>
-                            <p>Coding exercises</p>
-                            <p>Access to our GitHub repos</p>
-                            <p>Community forum</p>
-                            <p>Flashcard decks</p>
-                            <p>New videos every week</p>
-                        </ul>
+                <div class="card--2">
+                    <li>
+                        <p>Likes</p><img src="./images/icon-facebook.svg" alt="">
+                    </li>
+                    <div class="left">
+                        <p class="number-1">52</p>
+                    </div>
+                    <div class="right">
+                        <img src="./images/icon-down.svg" alt=""> 2%
+                    </div>
+                </div>
+                <div class="card--2">
+                    <li>
+                        <p>Likes</p><img src="./images/icon-instagram.svg" alt="">
+                    </li>
+                    <div class="left">
+                        <p class="number-1">5462</p>
+                    </div>
+                    <div class="right">
+                        <img src="./images/icon-up.svg" alt=""> 2257%
+                    </div>
+                </div>
+                <div class="card--2">
+                    <li>
+                        <p>Profile Views</p><img src="./images/icon-instagram.svg" alt="">
+                    </li>
+                    <div class="left">
+                        <p class="number-1">52k</p>
+                    </div>
+                    <div class="right">
+                        <img src="./images/icon-up.svg" alt=""> 1375%
+                    </div>
+                </div>
+                <div class="card--2">
+                    <li>
+                        <p>Retweets</p><img src="./images/icon-twitter.svg" alt="">
+                    </li>
+                    <div class="left">
+                        <p class="number-1">117</p>
+                    </div>
+                    <div class="right">
+                        <img src="./images/icon-up.svg" alt=""> 303%
+                    </div>
+                </div>
+                <div class="card--2">
+                    <li>
+                        <p>Likes</p><img src="./images/icon-twitter.svg" alt="">
+                    </li>
+                    <div class="left">
+                        <p class="number-1">507</p>
+                    </div>
+                    <div class="right">
+                        <img src="./images/icon-up.svg" alt=""> 553%
+                    </div>
+                </div>
+                <div class="card--2">
+                    <li>
+                        <p>Likes</p><img src="./images/icon-youtube.svg" alt="">
+                    </li>
+                    <div class="left">
+                        <p class="number-1">107</p>
+                    </div>
+                    <div class="right">
+                        <img src="./images/icon-down.svg" alt=""> 19%
+                    </div>
+                </div>
+                <div class="card--2">
+                    <li>
+                        <p>Total Views</p><img src="./images/icon-youtube.svg" alt="">
+                    </li>
+                    <div class="left">
+                        <p class="number-1">1407</p>
+                    </div>
+                    <div class="right">
+                        <img src="./images/icon-down.svg" alt=""> 12%
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer>
-        <p class="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.github.com/blade-01">Animashaun Taofiq T</a>.
-        </p>
-    </footer>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+        <a href="https://github.com/blade-01">Animashaun Taofiq T</a>.
+    </div>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
