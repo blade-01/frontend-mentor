@@ -1,11 +1,6 @@
-const amount = document.querySelectorAll('.amount');
-const active = document.querySelectorAll('.active');
-const toggle = document.querySelector('#toggle');
+const toggle = document.querySelector('.toggle');
+const nav = document.querySelector('.sideNav');
 toggle.addEventListener('click', () => {
-    amount.forEach((amount) => {
-        active.forEach((active) => {
-            active.classList.toggle('unshow-active');
-        })
-        amount.classList.toggle('show-amount');
-    })
+    toggle.classList.toggle('display');
+    nav.classList.toggle('visible');
 })

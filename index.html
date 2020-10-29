@@ -5,107 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
-
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <title>Frontend Mentor | [Challenge Name Here]</title>
+    <title>Frontend Mentor | Project tracking intro component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
         .attribution {
-            font-size: 10px;
+            font-size: 11px;
             text-align: center;
-            padding: 0.5rem 0;
+            padding: 5rem 2rem;
         }
         
         .attribution a {
             color: hsl(228, 45%, 44%);
+            text-transform: capitalize;
         }
     </style>
 </head>
 
 <body>
-    <!-- Toggle -->
-    <div class="header">
+
+    <div class="bg"></div>
+    <!-- Header & Nav -->
+    <header class="header">
         <div class="container">
-            <div class="header-content">
-                <h1>Our Pricing</h1>
-                <div class="toggle-box">
-                    <p>Annually</p><input type="checkbox" id="toggle" class="checkbox" />
-                    <label for="toggle" class="switch"></label>
-                    <p>Monthly</p>
+            <div class="logo">
+                <img src="./images/logo.svg" alt="">
+            </div>
+            <nav class="hide-on-sm">
+                <ul>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                    <li class="login"><a href="#">Login</a></li>
+                </ul>
+            </nav>
+            <div class="toggle">
+                <div class="hamburger hide-on-lg">
+                    <img src="./images/icon-hamburger.svg" alt="">
+                </div>
+                <div class="close hide-on-lg">
+                    <img src="./images/icon-close.svg" alt="">
                 </div>
             </div>
         </div>
+    </header>
+
+    <!-- Menu -->
+    <div class="sideNav hide-on-lg">
+        <nav class="sideNav-content">
+            <ul>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <hr class="hr">
+                <li class="login"><a href="#">Login</a></li>
+            </ul>
+        </nav>
     </div>
 
-    <!-- Cards -->
-    <section class="cards">
+    <!-- Showcase -->
+    <section class="showcase">
         <div class="container">
-            <div class="card">
-                <ul class="card-1 box-shadow">
-                    <li>
-                        <p class="name">Basic</p>
-                        <h1 class="active">&dollar;199.99</h1>
-                        <h1 class="amount">&dollar;19.99</h1>
-                    </li>
-                    <li>
-                        <p>500 GB Storage</p>
-                    </li>
-                    <li>
-                        <p>2 Users Allowed</p>
-                    </li>
-                    <li>
-                        <p>Send up to 3 GB</p>
-                    </li>
-                    <button class="btn">Learn More</button>
-                </ul>
-                <ul class="card-2 box-shadow">
-                    <li>
-                        <p class="name">Professional</p>
-                        <h1 class="active">&dollar;249.99</h1>
-                        <h1 class="amount">&dollar;24.99</h1>
-                    </li>
-                    <li>
-                        <p>1 TB Storage</p>
-                    </li>
-                    <li>
-                        <p>5 Users Allowed</p>
-                    </li>
-                    <li>
-                        <p>Send up to 10 GB</p>
-                    </li>
-                    <button class="btn btn-2">Learn More</button>
-                </ul>
-                <ul class="card-3 box-shadow">
-                    <li>
-                        <p class="name">Master</p>
-                        <h1 class="active">&dollar;399.99</h1>
-                        <h1 class="amount">&dollar;39.99</h1>
-                    </li>
-                    <li>
-                        <p>2 TB Storage</p>
-                    </li>
-                    <li>
-                        <p>10 Users Allowed</p>
-                    </li>
-                    <li>
-                        <p>Send up to 20 GB</p>
-                    </li>
-                    <button class="btn">Learn More</button>
-                </ul>
+            <div class="showcase-content">
+                <img src="./images/illustration-devices.svg" alt="">
+                <div class="inner-showcase">
+                    <h4><span class="new">New</span> Monograph Dashboard</h4>
+                    <h1>Powerful insights into your team</h1>
+                    <p>Project planning and time tracking for agile teams</p>
+                    <div class="button">
+                        <button class="btn">Schedule a demo</button>
+                        <p>to see a live preview</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-
-
-
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.github.com/blade-01">Animashaun Taofiq T</a>.
-    </div>
+    <!-- Footer -->
+    <footer>
+        <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+            <a href="https://www.github.com/blade-01">Animashaun Taofiq T</a>.
+        </p>
+    </footer>
 
     <script src="main.js"></script>
 </body>

@@ -11,22 +11,27 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%)
+- Red: hsl(0, 100%, 68%)
 
 ### Neutral
 
-- Very Light Grayish Blue: hsl(240, 78%, 98%)
-- Light Grayish Blue: hsl(234, 14%, 74%)
-- Grayish Blue: hsl(233, 13%, 49%)
-- Dark Grayish Blue: hsl(232, 13%, 33%)
+- Very Dark Blue: hsl(230, 29%, 20%)
+- Dark Grayish Blue: hsl(230, 11%, 40%)
+- Grayish Blue: hsl(231, 7%, 65%)
+- Light Grayish Blue: hsl(207, 33%, 95%)
 
 ## Typography
 
 ### Body Copy
 
-- Font size: 15px
+- Font size: 18px
 
-### Font
+### Headings, Call-to-actions, Navigation
 
-- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
-- Weight: 700
+- Family: [Barlow Condensed](https://fonts.google.com/specimen/Barlow+Condensed)
+- Weights: 400, 700
+
+### Body
+
+- Family: [Barlow](https://fonts.google.com/specimen/Barlow)
+- Weights: 400
