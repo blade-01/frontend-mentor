@@ -1,26 +1,84 @@
-const body = document.querySelector('body');
-const toggle = document.getElementById('toggle');
-toggle.addEventListener('click', () => {
-    body.classList.toggle('white-bg');
-});
+const input = document.querySelector('#input');
+const clear = document.querySelector('.btn');
+const filterList = document.querySelector('.filter-list');
 
-// Counter
-const number = document.querySelectorAll('.number');
-const speed = 200;
+// // Search data.json and filter it
+// const inputData = async inputText => {
+//     const res = await fetch('./data.json');
+//     const data = await res.json();
 
-number.forEach(number => {
-    const updateNumber = () => {
-        const target = +number.getAttribute('data-target');
-        const numb = +number.innerText;
+//     // Get matches to current text input
+//     let matches = data.filter(data => {
+//         const regex = new RegExp(`^${inputText}`, 'gi');
+//         return data.position.match(regex);
+//     });
 
-        const inc = target / speed;
+//     if (inputText.length === 0) {
+//         matches = [];
+//         filterList = '';
+//     }
 
-        if (numb < target) {
-            number.innerText = Math.ceil(numb + inc);
-            setTimeout(updateNumber, 1);
+//     outputHtml(matches);
+// };
+
+// // Show results in HTML
+// const outputHtml = matches => {
+//     if (matches.length > 0) {
+//         const result = matches.map(match => `<div class="filter-- filter-1">
+//         <div>
+//             <img src="${match.logo}" alt="">
+//             <li class="title">
+//                 <p>${match.company} <span class="new">${match.new}</span> <span class="featured">${match.featured}</span></p>
+//             </li>
+//             <li class="post">
+//                 <h4>${match.position}</h4>
+//             </li>
+//             <li class="location">
+//                 <p>
+//                 ${match.postedAt}
+//                     <span><i class="fa fa-circle"></i></span> ${match.contract}
+//                     <span><i class="fa fa-circle"></i></span> ${match.location}
+//                 </p>
+//             </li>
+//         </div>
+//         <hr>
+//         <div class="role">
+//         <p>${match.role}</p>
+//         <p>${match.level}</p>
+//         <p>${match.languages}</p>
+//         <p>${match.tools}</p>
+//         </div>
+//         </div>`).join('');
+
+//         filterList.innerHTML = result;
+//     }
+// };
+
+// input.addEventListener('input', () => inputData(input.value));
+
+input.addEventListener('input', () => {
+    // input.style.background = 'url(./images/icon-remove.svg) right 20px center no-repeat';
+    // input.style.background = '#ddd';
+    // Get value of input
+    const inputValue = document.querySelector('#input').value;
+    input.style.padding = '1rem';
+    input.style.color = 'var(--desaturated-dark-cyan)';
+    input.style.fontWeight = 'bolder';
+    // Get Filter List
+    const filter = document.querySelector('.filter-list');
+    // Get Filter from List
+    const filterList = filter.querySelectorAll('.filter--');
+    // Loop through collection of list
+    filterList.forEach((filter) => {
+        if (filter.innerHTML.indexOf(inputValue) > -1) {
+            filter.style.display = '';
         } else {
-            numb.innerText = target;
+            filter.style.display = 'none';
         }
-    }
-    updateNumber();
+    })
 });
+
+clear.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('#input').value = '';
+})
