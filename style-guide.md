@@ -11,24 +11,19 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Pink: hsl(322, 100%, 66%)
-
-### Neutral
-
-- Very Dark Cyan: hsl(192, 100%, 9%)
-- Very Pale Blue: hsl(207, 100%, 98%)
+- Violet: hsl(257, 40%, 49%)
 
 ## Typography
 
 ### Headings
 
 - Family: [Poppins](https://fonts.google.com/specimen/Poppins)
-- Weights: 700
+- Weights: 400, 700
 
 ### Body
 
 - Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
-- Weights: 400, 600, 700
+- Weights: 400
 
 ## Icons
 
