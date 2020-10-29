@@ -5,104 +5,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- displays site properly based on user's device -->
-
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <!-- Googe Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Font Icon -->
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <!-- Style Sheet -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="style.css">
-    <title>Frontend Mentor | [Chat App Illustration]</title>
 
+    <title>Frontend Mentor | Clipboard landing page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+        
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="left-box"></div>
-        <div class="right-box"></div>
-        <div class="wrapper-content">
-            <div class="main-chat-box">
-                <div class="app-bg">
-                    <div class="top-ui">
-                        <div class="top-ui-content">
-                            <div class="avatar-stuff">
-                                <i class="fa fa-chevron-left left-chevron"></i>
-                                <img src="./images/avatar.jpg" alt="avatar">
-                                <div class="avatar-detail">
-                                    <h2>Samuel Green</h2>
-                                    <p>Available to Walk</p>
-                                </div>
-                            </div>
-                            <div class="nav">
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="chat-box">
-                        <div class="left-chat">
-                            <p>That sounds great. I’d be happy with that.</p>
-                        </div>
-                        <div class="left-chat">
-                            <p>Could you send over some pictures of your dog, please?</p>
-                        </div>
-                        <div class="right-img">
-                            <div class="img-1">
-                                <img src="./images/dog-image-1.jpg" alt="dog-1">
-                            </div>
-                            <div class="img-1">
-                                <img src="./images/dog-image-2.jpg" alt="dog-2">
-                            </div>
-                            <div class="img-1">
-                                <img src="./images/dog-image-3.jpg" alt="dog-3">
-                            </div>
-                        </div>
-                        <div class="right-chat">
-                            <p>Here are a few pictures. She’s a happy girl!</p>
-                        </div>
-                        <div class="right-chat right-chat-2">
-                            <p>Can you make it?</p>
-                        </div>
-                        <div class="left-chat">
-                            <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
-                        </div>
-                        <div class="left-chat-gradient">
-                            <div class="min">
-                                <div class="circle"></div>
-                                <p>30 minute walk</p>
-                            </div>
-                            <p class="dolls">$29</p>
-                        </div>
-                        <div class="left-chat-gradient">
-                            <div class="min">
-                                <div class="circle"></div>
-                                <p>1 hour walk</p>
-                            </div>
-                            <p class="dolls">$49</p>
 
+    <!-- Header -->
+    <header class="head">
+        <div class="container">
+            <div class="head-content">
+                <img src="./images/logo.svg" alt="">
+                <p class="text-head">A history of everything you copy</p>
+                <p>Clipboard allows you to track and organize everything you copy. Instantly access your clipboard on all your devices.</p>
+                <div class="button">
+                    <button class="btn-pry">Download for iOS</button>
+                    <button class="btn-sec">Download for Mac</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Showcase -->
+    <section class="showcase">
+        <div class="container">
+            <div class="showcase-content">
+                <p class="text-head-1">Keep track of your snippets</p>
+                <p>Clipboard instantly stores any item you copy in the cloud, meaning you can access your snippets immediately on all your devices. Our Mac and iOS apps will help you organize everything.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="showcase-1">
+        <div class="container">
+            <div class="showcase-1-content">
+                <div class="grid">
+                    <img src="./images/image-computer.png" alt="">
+                    <div class="grid-content">
+                        <div class="grid-1">
+                            <p class="text-head-2">Quick Search</p>
+                            <p>Easily search your snippets by content, category, web address, application, and more.</p>
                         </div>
-                        <div class="input">
-                            <div>
-                                <p>Type a message…</p>
-                            </div>
-                            <i class="fa fa-chevron-right right-chevron"></i>
+                        <div class="grid-1">
+                            <p class="text-head-2">iCloud Sync</p>
+                            <p>Instantly saves and syncs snippets across all your devices.</p>
+                        </div>
+                        <div class="grid-1">
+                            <p class="text-head-2">Complete History</p>
+                            <p>Retrieve any snippets from the first moment you started using the app.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="booking">
-                <h1>Simple booking</h1>
-                <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.
-                </p>
+    </section>
+
+    <section class="showcase-2">
+        <div class="container">
+            <div class="showcase-2-content">
+                <p class="text-head-3">Access Clipboard anywhere</p>
+                <p>Whether you’re on the go, or at your computer, you can access all your Clipboard snippets in a few simple clicks.</p>
+                <img src="./images/image-devices.png" alt="">
             </div>
         </div>
-        <div class="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
-            <a href="https://www.github.com/blade-01">Animashaun Taofiq T</a>.
+    </section>
+
+    <!-- Tab -->
+    <section class="tab">
+        <div class="container">
+            <div class="tab-content">
+                <p class="text-head-4">Supercharge your workflow</p>
+                <p>We’ve got the tools to boost your productivity.</p>
+            </div>
+            <div class="tab-grids">
+                <div class="tab-grid">
+                    <img src="./images/icon-blacklist.svg" alt="">
+                    <div class="tab-grid-1">
+                        <p class="text-head-5">Create blacklists</p>
+                        <p>Ensure sensitive information never makes its way to your clipboard by excluding certain sources.
+                        </p>
+                    </div>
+                </div>
+                <div class="tab-grid">
+                    <img src="./images/icon-text.svg" alt="">
+                    <div class="tab-grid-1">
+                        <p class="text-head-5">Plain text snippets</p>
+                        <p>Remove unwanted formatting from copied text for a consistent look.</p>
+                    </div>
+                </div>
+                <div class="tab-grid">
+                    <img src="./images/icon-preview.svg" alt="">
+                    <div class="tab-grid-1 tab-grid-2">
+                        <p class="text-head-5">Sneak preview</p>
+                        <p>Quick preview of all snippets on your Clipboard for easy access.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Sponsors -->
+    <section class="sponsors">
+        <div class="container">
+            <div class="sponsors-content">
+                <div class="sponsors-grid">
+                    <img src="./images/logo-google.png" alt="">
+                </div>
+                <div class="sponsors-grid">
+                    <img src="./images/logo-ibm.png" alt="">
+                </div>
+                <div class="sponsors-grid">
+                    <img src="./images/logo-microsoft.png" alt="">
+                </div>
+                <div class="sponsors-grid">
+                    <img src="./images/logo-hp.png" alt="">
+                </div>
+                <div class="sponsors-grid">
+                    <img src="./images/logo-vector-graphics.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clipboard -->
+    <section class="clipboard">
+        <div class="container">
+            <div class="clipboard-content">
+                <p class="text-head-6">Clipboard for iOS and Mac OS</p>
+                <p>Available for free on the App Store. Download for Mac or iOS, sync with iCloud and you’re ready to start adding to your clipboard.</p>
+                <div class="button">
+                    <button class="btn-1">Download for iOS</button>
+                    <button class="btn-2">Download for Mac</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry -->
+    <section class="enquiry">
+        <div class="container">
+            <div class="enquiry-content">
+                <ul>
+                    <li><img src="./images/logo.svg" alt=""></li>
+                </ul>
+                <ul>
+                    <li>FAQs</li>
+                    <li>Contact Us</li>
+                </ul>
+                <ul>
+                    <li>Privacy Policy</li>
+                    <li>Press Kit</li>
+                </ul>
+                <ul>
+                    <li>Install Guide</li>
+                </ul>
+                <div class="float-right">
+                    <a href="" class="fab fa-facebook-square fa-2x"></a>
+                    <a href="" class="fab fa-twitter fa-2x"></a>
+                    <a href="" class="fab fa-instagram fa-2x"></a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/blade-01">Animashaun Taofiq T</a>.
+            </p>
+        </footer>
+    </section>
+
 </body>
 
 </html>

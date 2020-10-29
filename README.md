@@ -1,6 +1,6 @@
-# Frontend Mentor - Chat app CSS illustration
+# Frontend Mentor - Clipboard landing page
 
-![Design preview for the Chat app CSS illustration coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Clipboard landing page coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
 
@@ -8,28 +8,28 @@ Thanks for checking out this front-end coding challenge.
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges allow you to improve your skills in a real-life workflow.
 
-**To do this challenge, you need a strong understanding of HTML and CSS.**
+**To do this challenge, you need a basic understanding of HTML and CSS**
 
 ## The challenge
 
-Your challenge is to build out this feature illustration using HTML & CSS and get it looking as close to the design as possible.
+Your challenge is to build out this landing page and get it looking as close to the design as possible.
 
-The only assets we provide in this challenge are the image of the person in the app UI and the 3 images of the dog. You need to create everything else using HTML & CSS!
+You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-Your users should be able to:
+Your users should be able to: 
 
-- View the optimal layout for the component depending on their device's screen size
-- See the chat interface animate on the initial load *(optional)*
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
 
 Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 
 ## Where to find everything
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design to work to.
+Your task is to build out the project to the designs inside the `/design` folder. You will find a mobile design, a desktop design, and also a design for the hover states to work to. 
 
 The designs are in JPG static format. This will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. This should help train your eye to perceive differences in spacings and sizes.
 
-If you would like the Sketch file in order to inspect the design in more detail it is available to buy from the challenge page on the platform.
+If you would like the Sketch file in order to inspect the design in more detail it is available to [purchase here](https://bmc.xyz/l/PgOjm2e6p).
 
 You will find all the required assets in the `/images` folder. The assets are already optimized.
 
