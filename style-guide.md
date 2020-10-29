@@ -11,16 +11,24 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Dark Blue: hsl(240, 38%, 20%)
-- Grayish Blue: hsl(240, 18%, 77%)
+- Dark Blue: hsl(233, 26%, 24%)
+- Lime Green: hsl(136, 65%, 51%)
+- Bright Cyan: hsl(192, 70%, 51%)
+
+### Neutral
+
+- Grayish Blue: hsl(233, 8%, 62%)
+- Light Grayish Blue: hsl(220, 16%, 96%)
+- Very Light Gray: hsl(0, 0%, 98%)
+- White: hsl(0, 0%, 100%)
 
 ## Typography
 
 ### Body Copy
 
-- Font size: 32px
+- Font size: 18px
 
 ### Font
 
-- Family: [Inter](https://fonts.google.com/specimen/Inter)
-- Weights: 300, 500, 700
+- Family: [Public Sans](https://fonts.google.com/specimen/Public+Sans)
+- Weights: 300, 400, 700
