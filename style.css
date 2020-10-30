@@ -367,13 +367,21 @@ ul {
     }
 }
 
+@media (min-width: 1200px) {
+    .community {
+        top: 75%;
+    }
+}
+
 @media (min-width: 1440px) {
     .container {
         width: 90%;
     }
+    .header {
+        height: auto;
+    }
     .showcase {
         width: 100%;
-        padding-top: 7%;
     }
     .showcase img {
         width: 760px;
@@ -403,7 +411,7 @@ ul {
         font-size: 40px;
     }
     .community {
-        top: 76%;
+        top: 78%;
         left: 0.5%;
     }
     .comm-text-head {
