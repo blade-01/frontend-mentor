@@ -1,84 +1,56 @@
 const input = document.querySelector('#input');
-const clear = document.querySelector('.btn');
 const filterList = document.querySelector('.filter-list');
+const filters = document.querySelector('.filters');
+const roles = document.querySelectorAll('.role p');
+const clear = document.querySelector('.btn');
+const close = document.querySelectorAll('.close');
+const chiped = document.querySelector('.chiped');
+const chips = document.querySelector('.chips');
 
-// // Search data.json and filter it
-// const inputData = async inputText => {
-//     const res = await fetch('./data.json');
-//     const data = await res.json();
-
-//     // Get matches to current text input
-//     let matches = data.filter(data => {
-//         const regex = new RegExp(`^${inputText}`, 'gi');
-//         return data.position.match(regex);
-//     });
-
-//     if (inputText.length === 0) {
-//         matches = [];
-//         filterList = '';
-//     }
-
-//     outputHtml(matches);
-// };
-
-// // Show results in HTML
-// const outputHtml = matches => {
-//     if (matches.length > 0) {
-//         const result = matches.map(match => `<div class="filter-- filter-1">
-//         <div>
-//             <img src="${match.logo}" alt="">
-//             <li class="title">
-//                 <p>${match.company} <span class="new">${match.new}</span> <span class="featured">${match.featured}</span></p>
-//             </li>
-//             <li class="post">
-//                 <h4>${match.position}</h4>
-//             </li>
-//             <li class="location">
-//                 <p>
-//                 ${match.postedAt}
-//                     <span><i class="fa fa-circle"></i></span> ${match.contract}
-//                     <span><i class="fa fa-circle"></i></span> ${match.location}
-//                 </p>
-//             </li>
-//         </div>
-//         <hr>
-//         <div class="role">
-//         <p>${match.role}</p>
-//         <p>${match.level}</p>
-//         <p>${match.languages}</p>
-//         <p>${match.tools}</p>
-//         </div>
-//         </div>`).join('');
-
-//         filterList.innerHTML = result;
-//     }
-// };
+// Loop through roles
+roles.forEach((role) =>
+    role.addEventListener('click', (e) => {
+        // Show Output Box
+        input.style.display = 'flex';
+        clear.style.display = 'flex';
+        filters.style.marginTop = '0rem';
+        // Create Element
+        const chiped = document.createElement('div');
+        const p = document.createElement('p');
+        // const innerDiv = document.createElement('div');
+        // Set Attribute
+        p.setAttribute('class', 'chip');
+        p.appendChild(document.createTextNode(role.innerHTML));
+        chiped.setAttribute('class', 'chiped');
+        // innerDiv.setAttribute = ('class', 'chip');
+        const svg = document.createElement('div');
+        svg.setAttribute('class', 'close');
+        svg.innerHTML = `<svg class="close" xmlns="http://www.w3.org/2000/svg" width="14" height="14"> <path fill="#FFF" fill-rule="evenodd" d="M11.314 0l2.121 2.121-4.596 4.596 4.596 4.597-2.121 2.121-4.597-4.596-4.596 4.596L0 11.314l4.596-4.597L0 2.121 2.121 0l4.596 4.596L11.314 0z" /> </svg>`;
+        svg.addEventListener('click', () => {
+            chiped.remove();
+        });
+        // Append
+        chiped.appendChild(p);
+        chiped.appendChild(svg);
+        chips.appendChild(chiped);
+        // Clear all chips
+        clear.addEventListener('click', (e) => {
+            chiped.remove();
+        });
+    })
+);
 
 // input.addEventListener('input', () => inputData(input.value));
 
-input.addEventListener('input', () => {
-    // input.style.background = 'url(./images/icon-remove.svg) right 20px center no-repeat';
-    // input.style.background = '#ddd';
-    // Get value of input
-    const inputValue = document.querySelector('#input').value;
-    input.style.padding = '1rem';
-    input.style.color = 'var(--desaturated-dark-cyan)';
-    input.style.fontWeight = 'bolder';
-    // Get Filter List
-    const filter = document.querySelector('.filter-list');
-    // Get Filter from List
-    const filterList = filter.querySelectorAll('.filter--');
-    // Loop through collection of list
-    filterList.forEach((filter) => {
-        if (filter.innerHTML.indexOf(inputValue) > -1) {
-            filter.style.display = '';
-        } else {
-            filter.style.display = 'none';
-        }
-    })
-});
-
-clear.addEventListener('click', (e) => {
-    e.preventDefault();
-    document.querySelector('#input').value = '';
-})
+// Get Filter List
+// const filter = document.querySelector('.filter-list');
+// Get Filter from List
+// const filterList = filter.querySelectorAll('.filter--');
+// Loop through collection of list
+// filterList.forEach((filter) => {
+//     if (filter.innerHTML.indexOf(inputValue) > -1) {
+//         filter.style.display = '';
+//     } else {
+//         filter.style.display = 'none';
+//     }
+// });
