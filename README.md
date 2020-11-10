@@ -20,6 +20,8 @@
 
 - Four Card Feature Section [view](https://caards.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/card)
 
+- Testimonials Grid Section [view](https://testimonialss.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/testimonial)
+
 ## Junior
 
 - Fylo Dark Theme Landing Page [view](https://fylo-dark-land.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/fylodark)
