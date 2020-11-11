@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <!-- Leaflet CSS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" /> -->
+    <!-- Google Font -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet" /> -->
+    <!-- Leaflet JS -->
+    <!-- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script> -->
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>IP Address Tracker</h1>
+            <form>
+                <input type="number" name="number" placeholder="Search for any IP address or domain" />
+                <button><img src="./images/icon-arrow.svg" alt="" /></button>
+            </form>
+        </div>
+    </header>
+
+    <!-- IP Info -->
+    <section class="info">
+        <div class="info-content">
+            <div>
+                <h3>IP Address</h3>
+                <h2 class="ip">192.212.174.101</h2>
+            </div>
+            <div>
+                <h3>Location</h3>
+                <h2 class="location">Brooklyn, NY 10001</h2>
+            </div>
+            <div>
+                <h3>Timezone</h3>
+                <h2 class="timezone">UTC -05:00</h2>
+            </div>
+            <div>
+                <h3>ISP</h3>
+                <h2 class="isp">SpaceX Starlink</h2>
+            </div>
+        </div>
+    </section>
+
+    <div class="map"></div>
+
+    <!-- Attribution -->
+    <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.github.com/blade-01">Animashaun Taofiq T</a>.
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

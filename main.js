@@ -1,0 +1,61 @@
+// Variables
+const form = document.querySelector('form');
+const input = document.querySelector('input');
+const btn = document.querySelector('button');
+const ip = document.querySelector('.ip');
+const locations = document.querySelector('.location');
+const timezone = document.querySelector('.timezone');
+const isp = document.querySelector('.isp');
+
+// Map Init
+let displayMap = (lat, long) => {
+  var container = L.DomUtil.get('map');
+  if (container != null) {
+    container._leaflet_id = null;
+  }
+
+  let map = L.map('map').setView([lat, long], 14);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(map);
+
+  let myIcon = L.icon({
+    iconUrl: './images/icon-location.svg',
+    iconAnchor: [lat, long],
+  });
+
+  let marker = L.marker([lat, long], { icon: myIcon }).addTo(map);
+};
+
+// Fetch
+let getIpDetails = (ip) => {
+  fetch(
+    `https://geo.ipify.org/api/v1?apiKey=at_cDRwvU8HCGLZQZIcIgdoTS5NJMYf1&ipAddress=${ip}`
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      ip.innerText = data.ip;
+      locations.innerText = `${data.location.city}, ${data.location.country}, ${data.location.postalCode}`;
+      timezone.innerText = `UTC ${data.location.timezone}`;
+      isp.innerText = data.isp;
+      displayMap(data.location.lat, data.location.lng);
+    });
+};
+
+let getUserIpAddress = () => {
+  fetch('https://api.ipify.org?format=json')
+    .then((res) => res.json())
+    .then((data) => {
+      getIpDetails(data.ip);
+    });
+};
+
+// Event
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  getIpDetails(input.value);
+  input.value = '';
+});
+btn.addEventListener('click', getIpDetails(input.value));
