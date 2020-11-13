@@ -191,7 +191,10 @@ input::placeholder {
         width: 10%;
     }
     .info {
-        width: 900px;
+        width: 800px;
+    }
+    .info-content div {
+        padding: 1.5rem 3rem;
     }
     .info-content div p {
         font-size: 16px;
@@ -207,6 +210,6 @@ input::placeholder {
         padding: 2rem;
     }
     .info-content div {
-        padding: 0.5rem 2.5rem;
+        padding: 1.5rem 4rem;
     }
 }
