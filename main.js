@@ -43,13 +43,13 @@ let getIpDetails = (ip) => {
         });
 };
 
-let getUserIpAddress = () => {
-    fetch('https://api.ipify.org?format=json')
-        .then((res) => res.json())
-        .then((data) => {
-            getIpDetails(data.ip);
-        });
-};
+// let getUserIpAddress = () => {
+//     fetch('https://api.ipify.org?format=json')
+//         .then((res) => res.json())
+//         .then((data) => {
+//             getIpDetails(data.ip);
+//         });
+// };
 
 // Event
 form.addEventListener('submit', (e) => {

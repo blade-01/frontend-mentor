@@ -3,7 +3,7 @@ body {
     font-size: 18px;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 *,
@@ -88,7 +88,7 @@ input::placeholder {
     top: 250px;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    z-index: 1000;
     background: var(--light);
     color: var(--dark-gray);
     border-radius: 10px;
@@ -123,9 +123,9 @@ input::placeholder {
 /* Map */
 
 #map {
-    height: 100vh;
+    height: 500px;
     width: 100%;
-    overflow: hidden;
+    /* background: green; */
 }
 
 
@@ -189,6 +189,9 @@ input::placeholder {
     .info-content div p {
         font-size: 20px;
     }
+    /* #map {
+        height: 700px;
+    } */
     .attribution {
         font-size: 10px;
     }
@@ -205,4 +208,7 @@ input::placeholder {
     .info-content div {
         padding: 0.5rem 2.5rem;
     }
+    /* #map {
+        height: 750px;
+    } */
 }
