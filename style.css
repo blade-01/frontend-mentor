@@ -21,11 +21,6 @@ body {
     --dark: #000;
 }
 
-.leaflet-left {
-    right: 0 !important;
-    bottom: 0 !important;
-}
-
 
 /* Header */
 
