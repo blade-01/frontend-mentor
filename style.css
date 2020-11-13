@@ -202,11 +202,22 @@ input::placeholder {
 }
 
 @media screen and (min-width: 1400px) {
-    .header-content,
-    .info {
+    header {
+        height: 260px;
+    }
+    .header-content {
         width: 1000px;
+        padding-top: 1.2rem;
     }
     .info {
+        width: 1000px;
         padding: 2rem;
+        top: 260px;
+    }
+    .info-content div {
+        padding: 1.5rem 2rem;
+    }
+    #map {
+        height: 640px;
     }
 }
