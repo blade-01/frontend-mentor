@@ -123,9 +123,8 @@ input::placeholder {
 /* Map */
 
 #map {
-    height: 500px;
+    height: 100vh;
     width: 100%;
-    /* background: green; */
 }
 
 
@@ -149,12 +148,33 @@ input::placeholder {
     color: hsl(228, 45%, 44%);
 }
 
-@media screen and (min-width: 1000px) {
-    header {
-        height: 250px;
+@media screen and (min-width: 700px) {
+    .info-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .info-content div {
+        align-items: flex-start;
+        padding: 0.5rem 2rem;
+        border-right: 1px solid var(--dark-gray);
+    }
+    .info-content div:last-child {
+        border-right: none;
+    }
+    .info-content div p {
+        font-size: 11px;
     }
     .header-content {
         padding-top: 2.5rem;
+        width: 400px;
+    }
+    .attribution {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .header-content {
         width: 900px;
     }
     form {
@@ -171,29 +191,10 @@ input::placeholder {
         width: 10%;
     }
     .info {
-        top: 250px;
         width: 900px;
     }
-    .info-content {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-    .info-content div {
-        align-items: flex-start;
-        padding: 0.5rem 2rem;
-        border-right: 1px solid var(--dark-gray);
-    }
-    .info-content div:last-child {
-        border-right: none;
-    }
     .info-content div p {
-        font-size: 20px;
-    }
-    /* #map {
-        height: 700px;
-    } */
-    .attribution {
-        font-size: 10px;
+        font-size: 16px;
     }
 }
 
@@ -208,7 +209,4 @@ input::placeholder {
     .info-content div {
         padding: 0.5rem 2.5rem;
     }
-    /* #map {
-        height: 750px;
-    } */
 }
