@@ -209,7 +209,4 @@ input::placeholder {
     .info {
         padding: 2rem;
     }
-    .info-content div {
-        padding: 1.5rem 4rem;
-    }
 }
