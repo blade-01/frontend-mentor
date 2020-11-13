@@ -62,4 +62,6 @@
 
 - Room Homepage [view](https://room-home.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/room)
 
+- IP Address Tracker [view](https://ip-track.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/ip-tracker)
+
 ## Adios! 👋
