@@ -2,7 +2,7 @@
 
 ## Welcome! 👋
 
-> These are the projects from my [Frontend Mentor](https://www.frontendmentor.io) challenges ranging from Newbie-Junior-Intermediate.
+> These are the projects from my [Frontend Mentor](https://www.frontendmentor.io) challenges ranging from Newbie-Junior-Intermediate-Advanced.
 
 ## Newbie
 
@@ -63,5 +63,9 @@
 - Room Homepage [view](https://room-home.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/room)
 
 - IP Address Tracker [view](https://ip-track.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/ip-tracker)
+
+## Advanced
+
+- REST Countries API [view](https://restcountry-api.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/countries-api)
 
 ## Adios! 👋
