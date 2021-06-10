@@ -34,29 +34,32 @@
       </div>
     </header>
 
-    <form action="" class="form">
+    <form class="form">
       <div class="container">
         <div class="form-input">
           <div class="search-tab">
             <i class="fa fa-search search-icon"></i>
             <input
+              aria-label="search"
               type="text"
               class="input"
+              name="search"
               placeholder="Search for a country..."
             />
+            <input type="submit" value="submit" aria-hidden="true" />
           </div>
           <div class="dropdown">
-            <div name="select" id="select" class="select">
+            <div id="select" class="select">
               <p>
                 Filter by Region
                 <span class="fa chevron fa-chevron-down"></span>
               </p>
               <ul class="selectdrop">
-                <li value="africa">Africa</li>
-                <li value="america">Americas</li>
-                <li value="asia">Asia</li>
-                <li value="europe">Europe</li>
-                <li value="oceania">Oceania</li>
+                <li>Africa</li>
+                <li>Americas</li>
+                <li>Asia</li>
+                <li>Europe</li>
+                <li>Oceania</li>
               </ul>
             </div>
           </div>
@@ -72,13 +75,13 @@
     </div>
 
     <!-- Page Details -->
-    <section class="single-page">
+    <aside class="single-page">
       <div class="container">
         <div class="single-page-content">
           <!-- API Data goes here  -->
         </div>
       </div>
-    </section>
+    </aside>
 
     <script src="main.js"></script>
   </body>
