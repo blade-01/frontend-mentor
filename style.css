@@ -17,6 +17,10 @@ body {
   padding: 0;
 }
 
+input[type="submit"] {
+  display: none;
+}
+
 :root {
   --dark-mode-elements: hsl(209, 23%, 22%);
   --dark-mode-bg: hsl(207, 26%, 17%);
