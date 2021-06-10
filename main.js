@@ -29,6 +29,7 @@ function getData(e) {
 selectOptions.forEach((select) => {
   select.addEventListener("click", () => {
     const region = select.textContent;
+    document.querySelector(".select p span").innerText = region;
     url = `https://restcountries.eu/rest/v2/region/${region}`;
     createCountry(url);
   });
@@ -55,7 +56,9 @@ function createCountry(url) {
       data.forEach((dat) => {
         output += `<div class="card">
               <div class="card-img">
-                <img src="${dat.flag}" alt="" class="img"/>
+                <img src="${
+                  dat.flag
+                }" alt="country-img" loading="lazy" class="img"/>
               </div>
               <div class="card-body">
                 <h4>${dat.name}</h4>
@@ -100,7 +103,7 @@ function createDetails(data) {
       <i class="fa fa-arrow-left left"></i> Back
     </div>
     <div class="content">
-      <img src="${dat.flag}" alt="" class="county" />
+      <img src="${dat.flag}" alt="country-img" loading="lazy" class="county" />
       <div class="content-1">
         <h4>${dat.name}</h4>
         <div class="native-level">
@@ -174,7 +177,7 @@ function createNewDetails(data) {
       <i class="fa fa-arrow-left left"></i> Back
     </div>
     <div class="content">
-      <img src="${data.flag}" alt="" class="county" />
+      <img src="${data.flag}" alt="country-img" loading="lazy" class="county" />
       <div class="content-1">
         <h4>${data.name}</h4>
         <div class="native-level">

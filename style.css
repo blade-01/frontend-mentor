@@ -126,6 +126,7 @@ input::placeholder {
   padding: 0.6rem 0.5rem;
   cursor: pointer;
   display: inline-block;
+  width: 150px;
 }
 
 .select p {
@@ -134,7 +135,7 @@ input::placeholder {
   align-items: center;
 }
 
-.select span {
+.select .chevron {
   margin-left: 1rem;
 }
 
@@ -144,7 +145,7 @@ input::placeholder {
   left: 0;
   top: 50px;
   display: none !important;
-  width: 147px;
+  width: 150px;
 }
 
 .show .chevron {
@@ -355,6 +356,12 @@ input::placeholder {
   .container {
     max-width: 900px;
   }
+  header {
+    padding: 1.3rem 0;
+  }
+  form {
+    margin-top: 6rem;
+  }
   .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -383,7 +390,7 @@ input::placeholder {
 
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1200px;
   }
   .native-level {
     display: flex;
