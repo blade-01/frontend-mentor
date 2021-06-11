@@ -1,0 +1,15 @@
+// Contains configurations (Mainly Variables)
+$pri-bg: #f4f4f4;
+$sec-bg: rgb(0, 113, 243);
+$pri-text: #000000;
+$sec-text: #ffffff;
+$btn-color: rgb(30, 30, 206);
+
+// Set text color based on bg
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}

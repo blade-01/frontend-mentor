@@ -1,0 +1,33 @@
+// Styled Buttons
+%btn {
+  display: inline-block;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  transition: ease 0.4s;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &::before {
+    background: lighten($color: $pri-bg, $amount: 10%);
+    width: 10%;
+    height: auto;
+  }
+
+  &:hover,
+  &::before {
+    transform: scale(0.98);
+    opacity: 0.8;
+    background: $btn-color;
+    color: $sec-text;
+  }
+}
+
+.btn-primary {
+  @extend %btn;
+}
+
+.btn-secondary {
+  @extend %btn;
+}

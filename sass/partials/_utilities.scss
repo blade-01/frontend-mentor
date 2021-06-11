@@ -1,0 +1,39 @@
+// Contains Universal Properties
+.container {
+  margin: auto;
+  width: 90%;
+  overflow: hidden;
+}
+
+// Loop: Margin and Padding
+$spaceamounts: (1, 2, 3, 4, 5);
+
+@each $space in $spaceamounts {
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+  .p-#{$space} {
+    padding: #{$space}rem;
+  }
+  .py-#{$space} {
+    padding: #{$space}rem 0;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: set-text-color($sec-bg);
+}
+
+li {
+  list-style: none;
+  display: inline;
+  padding: 0rem 0.5rem;
+}

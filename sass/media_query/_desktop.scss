@@ -1,0 +1,24 @@
+// Contains Desktop Media Query
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+
+  %flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header > .container {
+    @extend %flex;
+  }
+
+  main > .container {
+    @extend %flex;
+  }
+
+  img.illus {
+    width: 350px;
+  }
+}

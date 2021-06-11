@@ -1,0 +1,26 @@
+// Main style
+@import "partials/config";
+@import "partials/utilities";
+@import "partials/buttons";
+@import "partials/mixin";
+
+// Remarks: Props have to be in the same file for sharing to occur (i.e. Mixins must be in the same file as buttons for @include to work, same goes for inheritance (@extend won't work either))
+
+body {
+  background: $pri-bg;
+  margin: 0;
+  padding: 0;
+}
+
+header,
+main {
+  @include set-background($sec-bg);
+}
+
+main {
+  // clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
+  // position: relative;
+  height: 500px;
+}
+
+@import "media_query/desktop";
