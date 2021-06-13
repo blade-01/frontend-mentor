@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- [View Code](https://your-solution-url.com)
-- [Play Game](https://your-live-site-url.com)
+- [View Code](https://github.com/blade-01/frontend-mentor/tree/rsp-game)
+- [Play Game](https://rsp-games.netlify.app)
 
 ## My process
 
