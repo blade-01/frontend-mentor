@@ -68,4 +68,6 @@
 
 - REST Countries API [view](https://restcountry-api.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/countries-api)
 
+- Rock, Scissors, Paper [view](https://rsp-games.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/rsp-game)
+
 ## Adios! 👋
