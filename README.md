@@ -2,7 +2,7 @@
 
 ## Welcome! 👋
 
-> These are the projects from my [Frontend Mentor](https://www.frontendmentor.io) challenges ranging from Newbie-Junior-Intermediate-Advanced.
+> These are the projects from my [Frontend Mentor](https://www.frontendmentor.io/profile/Tobesh01) challenges ranging from Newbie-Junior-Intermediate-Advanced.
 
 ## Table of contents
 
