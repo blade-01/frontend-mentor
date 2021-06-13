@@ -4,7 +4,14 @@
 
 > These are the projects from my [Frontend Mentor](https://www.frontendmentor.io) challenges ranging from Newbie-Junior-Intermediate-Advanced.
 
-## Newbie
+## Table of contents
+
+- [Newbie](#newbie)
+- [Junior](#junior)
+- [Intermediate](#intermediate)
+- [Advanced](#advanced)
+
+# Newbie
 
 - Base Apparel [view](https://based.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/base)
 
@@ -22,7 +29,7 @@
 
 - Testimonials Grid Section [view](https://testimonialss.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/testimonial)
 
-## Junior
+# Junior
 
 - Fylo Dark Theme Landing Page [view](https://fylo-dark-land.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/fylodark)
 
@@ -46,7 +53,7 @@
 
 - Social Media Dashboard with Theme Switcher [view](https://social-dash.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/social)
 
-## Intermediate
+# Intermediate
 
 - Chat App [view](https://chats-apps.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/chat)
 
@@ -64,7 +71,7 @@
 
 - IP Address Tracker [view](https://ip-track.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/ip-tracker)
 
-## Advanced
+# Advanced
 
 - REST Countries API [view](https://restcountry-api.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/countries-api)
 
