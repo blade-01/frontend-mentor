@@ -1,5 +1,10 @@
 // Contains Desktop Media Query
 @media screen and (min-width: 700px) {
+  .choice-wrapper {
+    height: 18vh;
+    width: 18vh;
+    margin: 4vh 0;
+  }
   .modal {
     background: rgba($color: #000000, $alpha: 0.45);
     height: 100%;
@@ -65,10 +70,6 @@
       transform: translate(0);
     }
   }
-  %wrapper {
-    width: 120px;
-    height: 120px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .container {
@@ -77,13 +78,13 @@
   header {
     .container {
       width: 700px;
-      margin: auto;
+      margin: 2rem auto 5rem;
     }
     .header-content {
       padding: 1rem 1rem;
     }
     & img {
-      width: 130px;
+      width: 150px;
     }
     & .scoreboard {
       padding: 0.7rem 1.5rem;
@@ -112,5 +113,8 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  .choice-wrapper {
+    margin: 1.5rem 5vw;
   }
 }

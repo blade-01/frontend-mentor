@@ -88,6 +88,7 @@
 
 .choice-wrapper {
   cursor: pointer;
+  margin: 5% 7%;
 }
 
 .loading::before {
@@ -499,6 +500,11 @@ footer .footer-content {
 }
 
 @media screen and (min-width: 700px) {
+  .choice-wrapper {
+    height: 18vh;
+    width: 18vh;
+    margin: 4vh 0;
+  }
   .modal {
     background: rgba(0, 0, 0, 0.45);
     height: 100%;
@@ -583,10 +589,6 @@ footer .footer-content {
     -webkit-transform: translate(0);
             transform: translate(0);
   }
-  .result-wrapper, .choice-wrapper {
-    width: 120px;
-    height: 120px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -595,13 +597,13 @@ footer .footer-content {
   }
   header .container {
     width: 700px;
-    margin: auto;
+    margin: 2rem auto 5rem;
   }
   header .header-content {
     padding: 1rem 1rem;
   }
   header img {
-    width: 130px;
+    width: 150px;
   }
   header .scoreboard {
     padding: 0.7rem 1.5rem;
@@ -632,5 +634,8 @@ footer .footer-content {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+  }
+  .choice-wrapper {
+    margin: 1.5rem 5vw;
   }
 }

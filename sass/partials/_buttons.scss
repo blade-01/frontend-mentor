@@ -65,6 +65,7 @@
 .choice-wrapper {
   @extend %wrapper;
   cursor: pointer;
+  margin: 5% 7%;
 }
 
 .loading::before {
