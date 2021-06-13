@@ -3,24 +3,248 @@
 @import "partials/utilities";
 @import "partials/buttons";
 @import "partials/mixin";
-
-// Remarks: Props have to be in the same file for sharing to occur (i.e. Mixins must be in the same file as buttons for @include to work, same goes for inheritance (@extend won't work either))
+// Import Font
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400&display=swap");
 
 body {
-  background: $pri-bg;
-  margin: 0;
-  padding: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background: $radial-grad;
+  font-size: 14px;
+  height: 100vh;
+  overflow-x: hidden;
 }
-
-header,
-main {
-  @include set-background($sec-bg);
+header {
+  margin: 1.5rem 0 1rem;
+  .header-content {
+    padding: 0.7rem;
+    border: solid 3px $header-outline;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  & img {
+    width: 100px;
+  }
+  & .scoreboard {
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    & .score {
+      color: $score-text;
+    }
+    & .counter {
+      font-size: 40px;
+      color: $dark-text;
+      animation: inverseOpacity 1.5s ease forwards;
+    }
+  }
 }
-
-main {
-  // clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
-  // position: relative;
-  height: 500px;
+// Flex Props
+%flex {
+  display: flex;
+  align-items: center;
 }
-
+section {
+  .section-content {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    margin: 5vh auto 0 auto;
+    flex-wrap: wrap;
+    width: 100vw;
+    max-width: 600px;
+    position: relative;
+    background: url("/images/bg-triangle.svg") no-repeat center center;
+    background-size: 50% 60%;
+    position: relative;
+    animation: inverseOpacity 1.5s ease forwards;
+  }
+  @keyframes inverseOpacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+.choice,
+.result-img {
+  width: 35%;
+  height: 35%;
+  z-index: 2;
+}
+.wrap-one {
+  @extend %flex;
+  justify-content: space-evenly;
+}
+.wrap-two {
+  @extend %flex;
+  justify-content: center;
+}
+.paper {
+  @include set-border($pap-grad);
+  box-shadow: 0px 8px 0px -1px #2642bf;
+}
+.rock {
+  @include set-border($rock-grad);
+  box-shadow: 0px 8px 0px -1px #991635;
+}
+.scissors {
+  @include set-border($sci-grad);
+  box-shadow: 0px 8px 0px -1px #cc6d1b;
+}
+.result {
+  margin-top: 4rem;
+  display: none;
+  animation: opacity 1s ease forwards;
+  & .player,
+  & .computer {
+    @extend %flex;
+    flex-direction: column-reverse;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.win-or-lose {
+  @extend %flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  & h1 {
+    margin: 4rem 0 1rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 25px;
+    color: #fff;
+  }
+}
+.win-fade {
+  animation-name: opac;
+  animation-duration: 0.25s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  width: 100%;
+  .footer-content {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.modal {
+  background: #f4f4f4;
+  height: 100%;
+  width: 100vw;
+  position: fixed;
+  overflow: hidden;
+  top: 0%;
+  left: -1000px;
+  z-index: 1000;
+  padding: 5rem;
+  transition: all ease 0.4s;
+  .img-rules {
+    @extend %flex;
+    justify-content: space-between;
+    flex-direction: column;
+    & h2 {
+      color: $header-outline;
+      text-transform: uppercase;
+      margin: 2rem 0;
+    }
+    & img {
+      margin: 2rem 0;
+    }
+    & .close {
+      cursor: pointer;
+    }
+  }
+}
+.show {
+  left: 0%;
+}
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+  25% {
+    opacity: 0.25;
+    width: 25%;
+  }
+  50% {
+    opacity: 0.5;
+    width: 50%;
+  }
+  75% {
+    opacity: 0.75;
+    width: 75%;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+.fade-out {
+  animation-name: fadeOut;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    width: 100%;
+  }
+  25% {
+    opacity: 0.75;
+    width: 75%;
+  }
+  50% {
+    opacity: 0.5;
+    width: 50%;
+  }
+  75% {
+    opacity: 0.25;
+    width: 25%;
+  }
+  100% {
+    opacity: 0;
+    width: 0%;
+  }
+}
 @import "media_query/desktop";

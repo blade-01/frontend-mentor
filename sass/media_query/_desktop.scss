@@ -1,24 +1,116 @@
 // Contains Desktop Media Query
+@media screen and (min-width: 700px) {
+  .modal {
+    background: rgba($color: #000000, $alpha: 0.45);
+    height: 100%;
+    width: 100vw;
+    position: fixed;
+    overflow: hidden;
+    top: 0%;
+    left: 0%;
+    z-index: 1000;
+    padding: 5rem;
+    display: none;
+    .img-rules {
+      background: #f4f4f4;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 1rem 3rem;
+      border-radius: 10px;
+      display: grid;
+      grid-column-gap: 14rem;
+      grid-template-areas: "tag close" "rules-img rules-img";
+      text-align: center;
+      & h2 {
+        margin: 0;
+        grid-area: tag;
+      }
+      & .rules-img {
+        grid-area: rules-img;
+        margin: 2rem 0;
+      }
+      & img {
+        margin: 1rem auto;
+      }
+      & .close {
+        cursor: pointer;
+        grid-area: close;
+      }
+    }
+  }
+  .show {
+    display: block;
+    animation: fade 0.4s ease;
+  }
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+    .footer-content {
+      position: absolute;
+      bottom: 10px;
+      left: unset;
+      right: 50px;
+      transform: translate(0);
+    }
+  }
+  %wrapper {
+    width: 120px;
+    height: 120px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1000px;
+    width: 800px;
   }
+  header {
+    .container {
+      width: 700px;
+      margin: auto;
+    }
+    .header-content {
+      padding: 1rem 1rem;
+    }
+    & img {
+      width: 130px;
+    }
+    & .scoreboard {
+      padding: 0.7rem 1.5rem;
 
-  %flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+      & .counter {
+        font-size: 45px;
+      }
+    }
   }
-
-  header > .container {
-    @extend %flex;
+  .result {
+    position: relative;
+    & .choice-wrapper {
+      width: 150px;
+      height: 150px;
+    }
+    & .player,
+    & .computer {
+      flex-direction: column;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: bolder;
+    }
   }
-
-  main > .container {
-    @extend %flex;
-  }
-
-  img.illus {
-    width: 350px;
+  .win-or-lose {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

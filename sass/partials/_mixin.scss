@@ -1,6 +1,3 @@
-// Like a function but doesn't return anything
-// Set bg and text-color
-@mixin set-background($color) {
-  background: $color;
-  color: set-text-color($color);
+@mixin set-border($border) {
+  background-image: ($border);
 }

@@ -1,15 +1,24 @@
 // Contains configurations (Mainly Variables)
-$pri-bg: #f4f4f4;
-$sec-bg: rgb(0, 113, 243);
-$pri-text: #000000;
-$sec-text: #ffffff;
-$btn-color: rgb(30, 30, 206);
-
+// Background
+$radial-grad: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+// Neutral
+$dark-text: hsl(229, 25%, 31%);
+$score-text: hsl(229, 64%, 46%);
+$header-outline: hsl(217, 16%, 45%);
+// Primary
+$sci-grad: linear-gradient(to top, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+$pap-grad: linear-gradient(to top, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+$rock-grad: linear-gradient(to top, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+$liz-grad: linear-gradient(to top, hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+$cyan-grad: linear-gradient(to top, hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+// Button Color
+$offwhite: darken(white, 10%);
+$darkblue: rgb(50, 50, 60);
 // Set text color based on bg
-@function set-text-color($color) {
-  @if (lightness($color) > 70) {
-    @return #333;
-  } @else {
-    @return #fff;
-  }
-}
+// @function set-text-color($color) {
+//   @if (lightness($color) > 70) {
+//     @return #333;
+//   } @else {
+//     @return #fff;
+//   }
+// }
