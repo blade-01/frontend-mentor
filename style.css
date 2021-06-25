@@ -233,7 +233,7 @@ input::placeholder {
   top: 60px;
   left: -100%;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 1;
   background: var(--light-mode-bg);
 }

@@ -16,33 +16,12 @@ select.addEventListener("click", () => {
   select.classList.toggle("show");
 });
 
-// Form Event - Filter by form
-form.addEventListener("input", getData);
-function getData(e) {
-  e.preventDefault();
-  const inputValue = document.querySelector(".input").value;
-  url = `https://restcountries.eu/rest/v2/name/${inputValue}`;
-  createCountry(url);
-}
-
-// Filter by Region
-selectOptions.forEach((select) => {
-  select.addEventListener("click", () => {
-    const region = select.textContent;
-    document.querySelector(".select p span").innerText = region;
-    url = `https://restcountries.eu/rest/v2/region/${region}`;
-    createCountry(url);
-  });
-});
-
 // Initial DOM load
-document.addEventListener("DOMContentLoaded", () => {
-  let url = "https://restcountries.eu/rest/v2/all";
-  createCountry(url);
-});
+document.addEventListener("DOMContentLoaded", getData);
 
-function createCountry(url) {
-  fetch(`${url}`)
+// Get Data from API
+function getData() {
+  fetch(`https://restcountries.eu/rest/v2/all`)
     .then((res) => {
       if (res.status != 200) {
         console.log("This is not a valid country");
@@ -55,101 +34,137 @@ function createCountry(url) {
       let output = "";
       data.forEach((dat) => {
         output += `<div class="card">
-              <div class="card-img">
-                <img src="${
-                  dat.flag
-                }" alt="country-img" loading="lazy" class="img"/>
-              </div>
-              <div class="card-body">
-                <h4>${dat.name}</h4>
-                <p><b>Population:</b> <span>${dat.population}</span></p>
-                <p><b>Region:</b> <span>${dat.region}</span></p>
-                <p><b>Capital:</b> <span>${
-                  dat.capital ? dat.capital : `Captial Not Found`
-                }</span></p>
-              </div>
-            </div>`;
+            <div class="card-img">
+              <img src="${
+                dat.flag
+              }" alt="country-img" loading="lazy" class="img"/>
+            </div>
+            <div class="card-body">
+              <h4>${dat.name}</h4>
+              <p><b>Population:</b> <span>${dat.population}</span></p>
+              <p><b>Region:</b> <span>${dat.region}</span></p>
+              <p><b>Capital:</b> <span>${
+                dat.capital ? dat.capital : `Captial Not Found`
+              }</span></p>
+            </div>
+          </div>`;
       });
       document.querySelector(".cards").innerHTML = output;
-      // Click through each country card
-      output = document.querySelectorAll(".card");
-      output.forEach((out) => {
-        out.addEventListener("click", () => {
-          const details = out.lastElementChild.firstElementChild.textContent;
-          fetch(`https://restcountries.eu/rest/v2/name/${details}
-      `)
-            .then((res) => res.json())
-            .then((data) => {
-              createDetails(data);
-            });
-          document.querySelector(".single-page").style.left = "0";
-          document.querySelector(".cards").style.display = "none";
-          document.querySelector(".form").style.display = "none";
-        });
-      });
+      getDetails();
     });
 }
 
-function createDetails(data) {
-  let output = "";
-  data.forEach((dat) => {
-    let html = "";
-    dat.borders.forEach((border) => {
-      // Create html template
-      html += `<p>${border}</p>`;
-    });
-    output += `
-    <div class="back">
-      <i class="fa fa-arrow-left left"></i> Back
-    </div>
-    <div class="content">
-      <img src="${dat.flag}" alt="country-img" loading="lazy" class="county" />
-      <div class="content-1">
-        <h4>${dat.name}</h4>
-        <div class="native-level">
-          <div class="native">
-            <p>Native Name:<span> ${dat.nativeName}</span></p>
-            <p>Population:<span> ${dat.population}</span></p>
-            <p>Region:<span> ${dat.region}</span></p>
-            <p>Sub Region:<span> ${dat.subregion}</span></p>
-            <p>Capital:<span> ${dat.capital}</span></p>
-          </div>
-          <div class="level">
-            <p>Top Level Domain:<span> ${dat.topLevelDomain[0]}</span></p>
-            <p>Currencies:<span> ${dat.currencies[0].name}</span></p>
-            <p>Language:<span> ${dat.languages.map(
-              (lang) => lang.name
-            )}</span></p>
-          </div>
-        </div>
-        <div class="border">
-          <p><b>Border Countries:</b></p>
-          <div class="border-country">
-            ${html ? html : `No Border Country`}
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-  });
-  document.querySelector(".single-page-content").innerHTML = output;
-  // Click through each Border Countries
-  border();
-  backButton();
-}
-
-function backButton() {
-  // Activate back Button
-  const singlePage = document.querySelector(".single-page");
-  singlePage.addEventListener("click", (e) => {
-    if (e.target.className == "back") {
-      singlePage.style.left = "-100%";
-      document.querySelector(".cards").style.display = "";
-      document.querySelector(".form").style.display = "";
+// Input - Filter by Country Name
+form.addEventListener("input", filterInput);
+function filterInput() {
+  const inputValue = document.querySelector(".input").value.toLowerCase();
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => {
+    const countryName = card.lastElementChild.firstElementChild.textContent;
+    if (countryName.toLowerCase().indexOf(inputValue) !== -1) {
+      card.style.display = "";
+    } else {
+      card.style.display = "none";
     }
   });
 }
 
+// Select - Filter by Region
+function filterData() {
+  selectOptions.forEach((select) => {
+    select.addEventListener("click", () => {
+      const region = select.textContent;
+      document.querySelector(".select p span").innerText = region;
+      const cards = document.querySelectorAll(".card");
+      cards.forEach((card) => {
+        const regionName =
+          card.lastElementChild.firstElementChild.nextElementSibling
+            .nextElementSibling.lastElementChild.textContent;
+        if (region === regionName) {
+          card.style.display = "";
+        } else if (region == "All") {
+          card.style.display = "";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+}
+filterData(); // Call filter by region function
+
+// Get More Details
+function getDetails() {
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const details = card.lastElementChild.firstElementChild.textContent;
+      fetch(`https://restcountries.eu/rest/v2/name/${details}`)
+        .then((res) => {
+          if (res.status !== 200) {
+            console.log("There seems to be an error");
+            throw Error(res.statusText);
+          } else {
+            return res.json();
+          }
+        })
+        .then((data) => {
+          let output = "";
+          data.forEach((dat) => {
+            let bord = "";
+            dat.borders.forEach((border) => {
+              bord += `<p>${border}</p>`;
+            });
+            output += `
+            <div class="back">
+              <i class="fa fa-arrow-left left"></i> Back
+            </div>
+            <div class="content">
+              <img src="${
+                dat.flag
+              }" alt="country-img" loading="lazy" class="county" />
+              <div class="content-1">
+                <h4>${dat.name}</h4>
+                <div class="native-level">
+                  <div class="native">
+                    <p>Native Name:<span> ${dat.nativeName}</span></p>
+                    <p>Population:<span> ${dat.population}</span></p>
+                    <p>Region:<span> ${dat.region}</span></p>
+                    <p>Sub Region:<span> ${dat.subregion}</span></p>
+                    <p>Capital:<span> ${dat.capital}</span></p>
+                  </div>
+                  <div class="level">
+                    <p>Top Level Domain:<span> ${
+                      dat.topLevelDomain[0]
+                    }</span></p>
+                    <p>Currencies:<span> ${dat.currencies[0].name}</span></p>
+                    <p>Language:<span> ${dat.languages.map(
+                      (lang) => lang.name
+                    )}</span></p>
+                  </div>
+                </div>
+                <div class="border">
+                  <p><b>Border Countries:</b></p>
+                  <div class="border-country">
+                    ${bord ? bord : `No Border Country`}
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+          });
+          document.querySelector(".single-page-content").innerHTML = output;
+          border();
+          backButton();
+        });
+      document.querySelector(".single-page").style.left = "0";
+      document.querySelector(".cards").style.display = "none";
+      document.querySelector(".form").style.display = "none";
+    });
+  });
+}
+
+// Get Data from border countries
 function border() {
   const bord = document.querySelectorAll(".border-country p");
   bord.forEach((bor) => {
@@ -165,12 +180,23 @@ function border() {
   });
 }
 
+// Remove More Details when back button is clicked
+function backButton() {
+  const singlePage = document.querySelector(".single-page");
+  singlePage.addEventListener("click", (e) => {
+    if (e.target.className == "back") {
+      singlePage.style.left = "-100%";
+      document.querySelector(".cards").style.display = "";
+      document.querySelector(".form").style.display = "";
+    }
+  });
+}
+
 function createNewDetails(data) {
   let output = "";
-  let html = "";
+  let bord = "";
   data.borders.forEach((border) => {
-    // Create html template
-    html += `<p>${border}</p>`;
+    bord += `<p>${border}</p>`;
   });
   output += `
     <div class="back">
@@ -199,7 +225,7 @@ function createNewDetails(data) {
         <div class="border">
           <p><b>Border Countries:</b></p>
           <div class="border-country">
-            ${html ? html : `No Border Country`}
+            ${bord ? bord : `No Border Country`}
           </div>
         </div>
       </div>
