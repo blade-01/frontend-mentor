@@ -37,7 +37,7 @@
 
 - Fylo Landing Page with two Column Layout [view](https://fylo-land-page.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/fyloland)
 
-- Huddle Landing Page with Curved Sections [view](https://huddle-curved.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/huddle-curved)
+- Huddle Landing Page with Curved Sections [view](https://huddle-curve.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/huddle-curved)
 
 - Huddle Landing Page with Alternating Feature Blocks [view](https://huddle-alternate.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/huddle-alternate)
 
