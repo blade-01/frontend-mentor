@@ -33,11 +33,11 @@ export default {
   color: var(--completed-color);
   font-weight: bold;
 }
-/* .todo-filter button:hover,
+.todo-filter button:hover,
 .todo-filter button:active {
   color: var(--card-color);
-} */
-.todo-filter z.isActive {
+}
+.todo-filter button.isActive {
   color: var(--blue-bright);
 }
 @media screen and (min-width: 700px) {

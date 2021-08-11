@@ -1,14 +1,25 @@
 <template class="todo-list">
   <div class="todo-list">
-    <draggable :list="todos" item-key="name"  ghost-class="ghost" :move="checkMove" @start="dragging = true" @end="dragging = false" @drag="checkMove" @drop="checkMove">
+    <draggable :list="todos" 
+               item-key="name"  
+               ghost-class="ghost" 
+               :move="checkMove"
+               @end="checkMove"
+               @drag="checkMove" 
+               @drop="checkMove">
       <template #item="{ element }">
         <div class="todo-list-item">
           <p class="box" :class="{isComplete: element.completed}">
-          <input :checked="element.completed" type="checkbox" name="complete" :id="element.id" @change="$emit('mark-todo')" v-model="element.completed">
+          <input :checked="element.completed" 
+                 type="checkbox" 
+                 name="complete" 
+                 :id="element.id" 
+                 @change="$emit('mark-todo')" 
+                 v-model="element.completed">
           <span class="check"></span>
           <label :for="element.id">{{element.content}}</label>
           </p>
-          <button @click="$emit('del-todo', todo)"><img class="close" src="../assets/img/icon-cross.svg" alt="" /></button>
+          <button @click="$emit('del-todo', element)"><img class="close" src="../assets/img/icon-cross.svg" alt="" /></button>
         </div>
       </template>
     </draggable>
@@ -17,7 +28,9 @@
       <button @click="$emit('clear-todo')">Clear Completed</button>
     </div>
   </div>
-  <todo-filter @show-completed="$emit('show-completed')" @show-all="$emit('show-all')" @show-active="$emit('show-active')"/>
+  <todo-filter @show-completed="$emit('show-completed')" 
+               @show-all="$emit('show-all')" 
+               @show-active="$emit('show-active')"/>
 </template>
 
 <script>
@@ -32,12 +45,10 @@ export default {
   data() {
     return {
       enabled: true,
-      dragging: false
     };
   },
   methods: {
     checkMove(drag) {
-      // const draggedItem = e.draggedContext.futureIndex;
       this.$emit('store-drag', drag)
     }
   }
