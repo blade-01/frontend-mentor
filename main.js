@@ -36,11 +36,11 @@ function getData() {
         output += `<div class="card">
             <div class="card-img">
               <img src="${
-                dat.flag
+                dat.flags.svg
               }" alt="country-img" loading="lazy" class="img"/>
             </div>
             <div class="card-body">
-              <h4>${dat.name}</h4>
+              <h4>${dat.name.common}</h4>
               <p><b>Population:</b> <span>${dat.population}</span></p>
               <p><b>Region:</b> <span>${dat.region}</span></p>
               <p><b>Capital:</b> <span>${
