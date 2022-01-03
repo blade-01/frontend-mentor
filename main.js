@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", getData);
 
 // Get Data from API
 function getData() {
-  fetch(`https://restcountries.eu/rest/v2/all`)
+  fetch(`https://restcountries.com/v3.1/all`)
     .then((res) => {
       if (res.status != 200) {
         console.log("This is not a valid country");
@@ -99,7 +99,7 @@ function getDetails() {
   cards.forEach((card) => {
     card.addEventListener("click", () => {
       const details = card.lastElementChild.firstElementChild.textContent;
-      fetch(`https://restcountries.eu/rest/v2/name/${details}`)
+      fetch(`https://restcountries.com/v3.1/name/${details}`)
         .then((res) => {
           if (res.status !== 200) {
             console.log("There seems to be an error");
@@ -170,7 +170,7 @@ function border() {
   bord.forEach((bor) => {
     bor.addEventListener("click", () => {
       const border = bor.textContent;
-      fetch(`https://restcountries.eu/rest/v2/alpha/${border}`)
+      fetch(`https://restcountries.com/v3.1/alpha/${border}`)
         .then((res) => res.json())
         .then((data) => {
           createNewDetails(data);
