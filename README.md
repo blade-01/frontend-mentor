@@ -1,80 +1,78 @@
-# Frontend Mentor Challenges | &#x1F4D8;
+<h1 align="center">Qr Code Component</h1>
 
-## Welcome! 👋
+<div align="center">
+   Qr Code Component is created to generate the qr code for my avatar. 😁
+</div>
 
-> These are the projects from my [Frontend Mentor](https://www.frontendmentor.io/profile/Tobesh01) challenges ranging from Newbie-Junior-Intermediate-Advanced.
+<div align="center">
+  <h3>
+    <a href="https://qrcode.netlify.app/">
+      Demo
+    </a>
+    <span> | </span>
+    <a href=" https://github.com/blade-01/frontend-mentor/tree/qr-code">
+      Code
+    </a>
+  </h3>
+</div>
 
-## Table of contents
+<!-- TABLE OF CONTENTS -->
 
-- [Newbie](#newbie)
-- [Junior](#junior)
-- [Intermediate](#intermediate)
-- [Advanced](#advanced)
+## Table of Contents
 
-# Newbie
+- [Overview](#overview)
+  - [Built With](#built-with)
+  - [Useful resources](#useful-resources)
+- [Features](#features)
+- [How to use](#how-to-use)
+- [Contact](#contact)
 
-- Base Apparel [view](https://based.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/base)
+<!-- OVERVIEW -->
 
-- Intro Component with Signup Form [view](https://intros.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/intro)
+## Overview
 
-- Article Preview Component [view](https://articled.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/article)
+![Screenshot](/src/assets/qr.png)
 
-- Coding Bootcamp Testimonials Slider [view](https://bootcamp-land.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/bootcamp)
+### Built With
 
-- Ping Coming Soon Page [view](https://pinged.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/ping)
+- Mobile-first workflow
+- [Vue.js](https://vuejs.org/) - Javascript Framework
 
-- Single Price Grid Component [view](https://single-priced.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/single-price)
+### Useful Resources
 
-- Four Card Feature Section [view](https://caards.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/card)
+- [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
+- [Tailwindcss](https://tailwindcss.com/) - Rapidly build modern websites without ever leaving your HTML.
 
-- Testimonials Grid Section [view](https://testimonialss.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/testimonial)
+## Features
 
-# Junior
+Users should be able to:
 
-- Fylo Dark Theme Landing Page [view](https://fylo-dark-land.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/fylodark)
+- ✅ View the optimal layout for the app depending on their device's screen size
+- ✅ See hover states for all interactive elements on the page
 
-- Fylo Data Storage Component [view](https://fylo-data.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/fylodata)
+## How To Use
 
-- Fylo Landing Page with two Column Layout [view](https://fylo-land-page.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/fyloland)
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
-- Huddle Landing Page with Curved Sections [view](https://huddle-curve.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/huddle-curved)
+```bash
+# Clone this repository
+$ git clone https://github.com/blade-01/frontend-mentor/tree/qr-code.git
 
-- Huddle Landing Page with Alternating Feature Blocks [view](https://huddle-alternate.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/huddle-alternate)
+# Project setup
+$ yarn
 
-- Huddle Landing Page with Single Introductory Section [view](https://huddle-singles.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/huddle-single)
+# Compiles and hot-reloads for development
+$ yarn dev
 
-- Insure Landing Page [view](https://insuree.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/insure)
+# Compiles and minifies for production
+$ yarn build
 
-- Clipbord Landing Page [view](https://clipss.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/clip)
+# Lints and fixes files
+$ yarn lint
+```
 
-- Pricing Component with Toggle [view](https://priced.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/price)
+## Contact
 
-- Project Tracking Intro Component [view](https://projected.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/project)
-
-- Social Media Dashboard with Theme Switcher [view](https://social-dash.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/social)
-
-# Intermediate
-
-- Chat App [view](https://chats-apps.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/chat)
-
-- Easybank Landing Page [view](https://easybankss.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/easybank)
-
-- Bookmark Landing Page [view](https://books-mark.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/bookmark)
-
-- Static Job Listings [view](https://static-list.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/static)
-
-- Url Shortening API [view](https://url-site.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/url)
-
-- Manage Landing Page [view](https://manages.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/manage)
-
-- Room Homepage [view](https://room-home.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/room)
-
-- IP Address Tracker [view](https://ip-track.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/ip-tracker)
-
-# Advanced
-
-- REST Countries API [view](https://restcountry-api.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/countries-api)
-
-- Rock, Scissors, Paper [view](https://rsp-games.netlify.app/) | [code](https://github.com/blade-01/frontend-mentor/tree/rsp-game)
-
-## Adios! 👋
+- Website - [Animashaun Taofiq T.](https://www.github.com/blade-01)
+- LinkedIn - [Animashaun Taofiq T.](https://www.linkedin.com/in/animashaun-taofiq/)
+- Twitter - [@dr_annys](https://www.twitter.com/dr_annys)
