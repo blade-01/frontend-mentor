@@ -6,11 +6,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://qrcode.netlify.app/">
+    <a href="https://qr-codee.netlify.app/">
       Demo
     </a>
     <span> | </span>
-    <a href=" https://github.com/blade-01/frontend-mentor/tree/qr-code">
+    <a href="https://github.com/blade-01/frontend-mentor/tree/qr-code">
       Code
     </a>
   </h3>
